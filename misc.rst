@@ -75,7 +75,14 @@ Install dependencies to build the package digikam::
 
     yum-builddep digikam
 
+Rebuild a Fedora package
+------------------------
+
 Rebuild a package: `Fedora Source RPM <http://hacktux.com/fedora/source/rpm>`_.
+
+If you get a .src.rpm package, you can rebuild it with::
+
+    rpmbuild --rebuild wrk-3.1.0-1.fc21.src.rpm
 
 Unpack RPM
 ----------
@@ -517,13 +524,6 @@ client (``psql``) and type::
 
 * http://doc.fedora-fr.org/wiki/Installation_et_configuration_de_PostgreSQL
 
-
-Rebuild a Fedora package
-========================
-
-If you get a .src.rpm package, you can rebuild it with::
-
-    rpmbuild --rebuild wrk-3.1.0-1.fc21.src.rpm
 
 Google
 ======
