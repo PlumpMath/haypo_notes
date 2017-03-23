@@ -756,3 +756,13 @@ Enable pam_ssh in PAM config:
 * March 2014: https://fr.wikipedia.org/wiki/Vol_370_Malaysia_Airlines#Hypoth.C3.A8se_d.27un_incident_technique
 * April 2016: Batteries lithium-ion interdites dans le transport de fret
   aérien.
+
+
+Gnome
+=====
+
+My CSS theme for window colored borders: https://github.com/haypo/misc/blob/master/conf/gtk.css
+
+https://wiki.gnome.org/Projects/GnomeShell/CheatSheet
+
+gsettings set org.gnome.desktop.wm.preferences focus-new-windows 'strict'

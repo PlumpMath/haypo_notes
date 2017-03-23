@@ -554,11 +554,32 @@ See also ``PYTHONASYNCIODEBUG=1`` for asyncio.
 CPython infra
 =============
 
-* https://github.com/python/cpython/ Git repository, Pull Requests
-* http://bugs.python.org/ Bug tracker (modified instance of Roundup)
+Python infrastructure
+---------------------
 
-  * XXX link to bug tracker of the bug tracker
+* http://infra.psf.io/
+* https://status.python.org/ Status of services maintained by the Python infra
+  team
+* https://github.com/python/psf-chef/
+* https://github.com/python/psf-salt/
+* PSF pays a full-time sysadmin to maintain the Python infra: XXX
+* https://www.python.org/psf/league/
+* Managed services: http://infra.psf.io/overview/#details-of-various-services
 
+Package Index (PyPI)
+--------------------
+
+* https://pypi.org/ "Warehouse", the new Python Package Index,
+
+  - https://github.com/pypa/warehouse
+
+* https://pypi.python.org/ "Python Cheeseshop", the old Python Package Index
+* Python CDN: http://infra.psf.io/services/cdn/
+
+cpython GitHub project
+----------------------
+
+* https://github.com/python/cpython/
 * GitHub uses mention-bot: https://github.com/facebook/mention-bot
 
   * https://github.com/mention-bot/how-to-unsubscribe
@@ -568,15 +589,34 @@ CPython infra
     mentioning anyone on your PRs.
 
 * https://github.com/python/core-workflow/tree/master/cherry_picker/
-* GitHub CLA bot: XXX
-* https://status.python.org/ Status of services maintained by the Python infra
-  team
-* PSF pays a full-time sysadmin to maintain the Python infra: XXX
-* https://pypi.python.org/ Old Python Package Index
-* https://pypi.org/ New Python Package Index, the new "Warehouse"
-* https://docs.python.org/ Python online documentation
 
-  * Mirror: XXX readthedocs
+Misc
+----
+
+* http://bugs.python.org/ Bug tracker (modified instance of Roundup)
+
+  * https://pypi.python.org/pypi/roundup
+  * Meta bug tracker: http://psf.upfronthosting.co.za/roundup/meta/
+    (bug in the bug tracker software)
+
+* Mailing lists: https://mail.python.org/mailman/listinfo
+
+  - python-dev
+  - python-ideas
+  - python-list
+  - lot of Special Interest Groups (SIG)
+  - etc.
+
+* http://buildbot.python.org/
+* GitHub CLA bot: XXX
+
+Documentation
+-------------
+
+* https://docs.python.org/ Python online documentation
+* https://github.com/python/docsbuild-scripts/
+* Mirror: http://python.readthedocs.io/en/latest/ Still use the old Mercurial repository.
+* https://www.python.org/dev/peps/pep-0545/ i18n doc
 
 
 Python platforms
