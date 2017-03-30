@@ -766,3 +766,14 @@ My CSS theme for window colored borders: https://github.com/haypo/misc/blob/mast
 https://wiki.gnome.org/Projects/GnomeShell/CheatSheet
 
 gsettings set org.gnome.desktop.wm.preferences focus-new-windows 'strict'
+
+
+Yubikey
+=======
+
+* Fedora: dnf install -y u2f-hidraw-policy
+  See https://gist.github.com/fntlnz/a4513162960e1e9fdb99
+* Firefox: https://addons.mozilla.org/fr/firefox/addon/u2f-support-add-on/
+  https://github.com/prefiks/u2f4moz
+* GitHub: https://github.com/settings/two_factor_authentication/configure click on [Register new device]
+* Firefox plugin doesn't work on Google nor Bitbucket

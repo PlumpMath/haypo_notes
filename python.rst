@@ -565,6 +565,8 @@ Python infrastructure
 * PSF pays a full-time sysadmin to maintain the Python infra: XXX
 * https://www.python.org/psf/league/
 * Managed services: http://infra.psf.io/overview/#details-of-various-services
+* http://www.pythontest.net/ used by the test suite, see
+  https://github.com/python/pythontestdotnet/
 
 Package Index (PyPI)
 --------------------
