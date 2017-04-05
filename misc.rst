@@ -22,6 +22,8 @@ Download a pull request::
 URLs:
 
 * Add ``?w=1`` in a pull request to ignore whitespace changes
+* Add ``.patch`` to a pull request to get the change as an unified diff
+* In a message, ``<details> ... </details>`` creates a drop-down
 
 vim for developer
 =================

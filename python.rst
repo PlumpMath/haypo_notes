@@ -561,6 +561,12 @@ Python infrastructure
 * https://status.python.org/ Status of services maintained by the Python infra
   team
 * https://github.com/python/psf-chef/
+
+  - `doc/nodes.rst
+    <https://github.com/python/psf-chef/blob/master/doc/nodes.rst>`_
+  - `doc/roles.rst
+    <https://github.com/python/psf-chef/blob/master/doc/roles.rst>`_
+
 * https://github.com/python/psf-salt/
 * PSF pays a full-time sysadmin to maintain the Python infra: XXX
 * https://www.python.org/psf/league/
