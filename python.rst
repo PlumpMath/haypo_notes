@@ -616,6 +616,9 @@ Misc
   - etc.
 
 * http://buildbot.python.org/
+
+  * https://github.com/python/buildmaster-config/tree/master/master
+
 * GitHub CLA bot: XXX
 
 Documentation
