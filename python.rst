@@ -12,6 +12,8 @@ The Python programming language
 * `Homepage of the Python project <https://www.python.org/>`_
 * :ref:`Unicode in Python 2 and Python 3 <python-unicode>`
 
+See also :ref:`Python performance <python-perf>`.
+
 
 Python 2 or Python 3?
 =====================

@@ -19,6 +19,7 @@ Contents:
    victor_stinner.rst
    contributions.rst
    python.rst
+   python_perf.rst
    unicode.rst
    asyncio.rst
    threads.rst
@@ -26,7 +27,7 @@ Contents:
    time.rst
    heap_fragmentation.rst
    python_memory.rst
-   microbenchmark.rst
+   benchmark.rst
    windows.rst
    gdb.rst
    misc.rst
