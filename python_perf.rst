@@ -4,10 +4,11 @@
 Python performance
 ++++++++++++++++++
 
-See also :ref:`Benchmarks <benchmark>` and :ref:`Python <python>`.
+See also :ref:`Benchmarks <benchmark>`, :ref:`Python <python>`
+and `Faster CPython <http://faster-cpython.readthedocs.io/>`_.
 
-Websites
-========
+Codespeed websites
+==================
 
 * `speed.python.org <https://speed.python.org/>`_: CPython benchmarks,
   run `performance <http://pyperformance.readthedocs.io/>`_
