@@ -20,6 +20,7 @@ Contents:
    contributions.rst
    python.rst
    python_perf.rst
+   pypy_warmups.rst
    unicode.rst
    asyncio.rst
    threads.rst
