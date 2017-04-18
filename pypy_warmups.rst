@@ -66,8 +66,35 @@ Must read paper: `Virtual Machine Warmup Blows Hot and Cold
 See also the `R changepoint package
 <https://cran.r-project.org/web/packages/changepoint/index.html>`_.
 
-2to3: loops=1, warmups=0, samples=30
-====================================
+Glossary
+========
+
+* Loops: number of outer loop iteration, number of times the benchmark function
+  is called to compute one "value". perf calibrates the number of iterations
+  to get a loop taking at least 100 ms.
+* Value: Average wall-clock time elapsed to call the number *loops* times.
+  Pseudo-code::
+
+    t0 = perf_counter()
+    for _ in range(loops):
+        func()
+    dt = perf_counter()
+    value = float(dt) / loops
+
+* Warmups: number of ignored values at the beginning of a benchmark. The number
+  is chosen to ignore first values were are usually much higher than the mean
+  of the "steady state"
+* Run: execution of one worker processes which computed values. In this
+  analysis, each worker process computed exactly 250 values.
+
+Example: a result with 10 runs, 8 values, 0 warmups and 250 values means that
+the benchmark function was called 10x8x250 = 20,000 times in total, and 8x250 =
+2,000 times per process, but the result only contains 10x250 = 2,500 values in
+total (or 250 values per process) since values are average time per loop
+iteration.
+
+2to3: loops=1, warmups=0, values=30
+===================================
 
 * many spikes up to +16% of the mean
 * no cycle
@@ -81,8 +108,8 @@ Moving average (50 values) of runs:
 
 .. image:: pypy_warmups/2to3_moving_avg50.png
 
-chameleon: loops=32, warmups=6, samples=10
-==========================================
+chameleon: loops=32, warmups=6, values=10
+=========================================
 
 Overall:
 
@@ -98,11 +125,11 @@ Large cycle of 42 values (Moving average 1 value, skip first 6 values):
 
 Mean:
 
-* loops=32, warmups=6, samples=10: 7.05 ms +- 0.23 ms
-* loops=32, warmups=6, samples=42: 7.02 ms +- 0.20 ms
+* loops=32, warmups=6, values=10: 7.05 ms +- 0.23 ms
+* loops=32, warmups=6, values=42: 7.02 ms +- 0.20 ms
 * LIMIT: loops=32, warmups=6: 7.01 ms +- 0.20 ms
 
-chaos: loops=16, warmups=20, samples=25
+chaos: loops=16, warmups=20, values=25
 =======================================
 
 Overall:
@@ -117,11 +144,11 @@ Glitch at values 35..38.
 
 Mean:
 
-* loops=16, warmups=20, samples=25: 6.50 ms +- 0.22 ms
+* loops=16, warmups=20, values=25: 6.50 ms +- 0.22 ms
 * LIMIT: warmups=20: 6.48 ms +- 0.22 ms
 
-crypto_pyaes: loops=16, warmups=46, samples=45
-==============================================
+crypto_pyaes: loops=16, warmups=46, values=45
+=============================================
 
 Overall:
 
@@ -133,7 +160,7 @@ Cycle of 9 values (average of runs, skip 46, limit to 45):
 
 Mean:
 
-* loops=16, warmups=46, samples=45: 9.81 ms +- 0.24 ms
+* loops=16, warmups=46, values=45: 9.81 ms +- 0.24 ms
 * LIMIT: loops=16, warmups=46: 9.81 ms +- 0.24 ms
 
 deltablue: loops=256, warmups=14, values=55
@@ -152,8 +179,8 @@ Mean:
 * loops=256, warmups=14, values=55: 441 us +- 20 us
 * LIMIT: loops=256, warmups=14: 440 us +- 19 us
 
-django_template: loops=4, warmups=12, samples=36
-================================================
+django_template: loops=4, warmups=12, values=36
+===============================================
 
 Overall:
 
@@ -165,8 +192,8 @@ Cycle of 7.3 values (average of runs, skip 12, limit to 36):
 
 Mean:
 
-* loops=4, warmups=12, samples=36: 36.9 ms +- 1.6 ms
-* loops=4, warmups=12, samples=73: 36.9 ms +- 1.6 ms
+* loops=4, warmups=12, values=36: 36.9 ms +- 1.6 ms
+* loops=4, warmups=12, values=73: 36.9 ms +- 1.6 ms
 * LIMIT: loops=4, warmups=12: 36.9 ms +- 1.6 ms
 
 dulwich_log: loops=2, warmups=21, values=18
@@ -205,8 +232,8 @@ Mean:
 * loops=1, warmups=59, values=40: 171 ms +- 1 ms
 * LIMIT: loops=1, warmups=59: 171 ms +- 1 ms
 
-float: loops=4, warmups=25, samples=40
-======================================
+float: loops=4, warmups=25, values=40
+=====================================
 
 Use the suboptimal step 2 to reduce total benchmark runtime, even if the step 3
 is a little bit faster.
@@ -225,7 +252,7 @@ Step 3: cycle of 16 values (average of runs, skip 119, limit 80):
 
 Mean:
 
-* Step 2: loops=4, warmups=25, samples=40: 41.0 ms +- 0.4 ms
+* Step 2: loops=4, warmups=25, values=40: 41.0 ms +- 0.4 ms
 * Step 3: loops=4, warmups=119: 39.9 ms +- 1.6 ms
 
 genshi_text: loops=8, BUG!
@@ -246,8 +273,8 @@ Overall:
 
 .. image:: pypy_warmups/genshi_xml.png
 
-go: loops=2, warmups=87, samples=80
-===================================
+go: loops=2, warmups=87, values=80
+==================================
 
 Overall:
 
@@ -268,12 +295,12 @@ optimization (look at the Y scale):
 
 Mean:
 
-* loops=2, warmups=87, samples=32: 87.4 ms +- 4.9 ms
-* loops=2, warmups=87, samples=80: 87.3 ms +- 5.0 ms
+* loops=2, warmups=87, values=32: 87.4 ms +- 4.9 ms
+* loops=2, warmups=87, values=80: 87.3 ms +- 5.0 ms
 * LIMIT: loops=2, warmups=87: 87.2 ms +- 5.0 ms
 
-hexiom: loops=64, warmups=36, samples=50
-========================================
+hexiom: loops=64, warmups=36, values=50
+=======================================
 
 Only compute 2 cycles instead of 5 to limit the benchmark total runtime, since
 the cycle of long (25 values).
@@ -288,11 +315,11 @@ Cycle of 25 values (average of runs, skip 36 , limit 127):
 
 Mean:
 
-* loops=64, warmups=36, samples=50: 2.32 ms +- 0.04 ms
+* loops=64, warmups=36, values=50: 2.32 ms +- 0.04 ms
 * LIMIT: loops=64, warmups=36: 2.33 ms +- 0.05 ms
 
-hg_startup: loops=1, warmups=4, samples=10
-==========================================
+hg_startup: loops=1, warmups=4, values=10
+=========================================
 
 Overall:
 
@@ -304,7 +331,7 @@ Step 2 (skip 4, limit 10):
 
 Mean:
 
-* loops=1, warmups=4, samples=10: 243 ms +- 1 ms
+* loops=1, warmups=4, values=10: 243 ms +- 1 ms
 * LIMIT: loops=1, warmups=4: 243 ms +- 1 ms
 
 TODO
