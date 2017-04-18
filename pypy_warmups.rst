@@ -16,7 +16,7 @@ The purpose of this analysis if to choose the number of warmups and samples for
 `performance benchmarks <http://pyperformance.readthedocs.io/>`_ for PyPy 5.7
 on the speed-python server.
 
-* small enough to reduce total runtime
+* small enough to reduce total benchmark runtime
 * get a mean-stdev of the sample close enough to mean-stdev of all values
 * if performance has a cycle (usually with a spike at the start or end):
   compute 5 cycles to use the average of a cycle
@@ -60,6 +60,12 @@ Script used to get the number of loops computed by perf::
         loops = loops[0]
         print("%s: loops=%s" % (bench.get_name(), loops))
 
+Must read paper: `Virtual Machine Warmup Blows Hot and Cold
+<https://arxiv.org/abs/1602.00602>`_ (december 2016).
+
+See also the `R changepoint package
+<https://cran.r-project.org/web/packages/changepoint/index.html>`_.
+
 2to3: loops=1, warmups=0, samples=30
 ====================================
 
@@ -99,100 +105,207 @@ Mean:
 chaos: loops=16, warmups=20, samples=25
 =======================================
 
-    cycle of 5 values (___^^)
-    loops=16, warmups=20, samples=25: 6.50 ms +- 0.22 ms
+Overall:
 
-    glitch at value 35..38
-    loops=16, warmups=40, samples=25: 6.48 ms +- 0.21 ms
+.. image:: pypy_warmups/chaos.png
 
-    LIMIT: warmups=40: 6.48 ms +- 0.21 ms
+Cycle of 5 values (average of runs, skip 20, limit to 50):
+
+.. image:: pypy_warmups/chaos_cycle.png
+
+Glitch at values 35..38.
+
+Mean:
+
+* loops=16, warmups=20, samples=25: 6.50 ms +- 0.22 ms
+* LIMIT: warmups=20: 6.48 ms +- 0.22 ms
 
 crypto_pyaes: loops=16, warmups=46, samples=45
 ==============================================
 
-    cycle of 9 values (/\/\/\...)
-    --run-means=1
-    loops=16, warmups=46, samples=45: 9.80 ms +- 0.25 ms
-    LIMIT: loops=16, warmups=46: 9.81 ms +- 0.24 ms
+Overall:
+
+.. image:: pypy_warmups/crypto_pyaes.png
+
+Cycle of 9 values (average of runs, skip 46, limit to 45):
+
+.. image:: pypy_warmups/crypto_pyaes_cycle.png
+
+Mean:
+
+* loops=16, warmups=46, samples=45: 9.81 ms +- 0.24 ms
+* LIMIT: loops=16, warmups=46: 9.81 ms +- 0.24 ms
 
 deltablue: loops=256, warmups=14, values=55
 ===========================================
 
+Overall:
 
-    cycle of 11 values
-    loops=256, warmups=14, values=55: 441 us +- 20 us
-    LIMIT: loops=256, warmups=14: 440 us +- 19 us
+.. image:: pypy_warmups/deltablue.png
+
+Cycle of 11 values (average of runs, skip 14, limit to 55):
+
+.. image:: pypy_warmups/deltablue_cycle.png
+
+Mean:
+
+* loops=256, warmups=14, values=55: 441 us +- 20 us
+* LIMIT: loops=256, warmups=14: 440 us +- 19 us
 
 django_template: loops=4, warmups=12, samples=36
 ================================================
 
-    cycle of 7 ... or 8 ... values (avg: 7.3)
+Overall:
 
-    loops=4, warmups=12, samples=36: 36.9 ms +- 1.6 ms
-    loops=4, warmups=12, samples=73: 36.9 ms +- 1.6 ms
-    LIMIT: loops=4, warmups=12: 36.9 ms +- 1.6 ms
+.. image:: pypy_warmups/django_template.png
+
+Cycle of 7.3 values (average of runs, skip 12, limit to 36):
+
+.. image:: pypy_warmups/django_template_cycle.png
+
+Mean:
+
+* loops=4, warmups=12, samples=36: 36.9 ms +- 1.6 ms
+* loops=4, warmups=12, samples=73: 36.9 ms +- 1.6 ms
+* LIMIT: loops=4, warmups=12: 36.9 ms +- 1.6 ms
 
 dulwich_log: loops=2, warmups=21, values=18
 ===========================================
 
-    cycle of 3.6 (avg) values
-    loops=2, warmups=21, values=18: 98.6 ms +- 4.7 ms
-    LIMIT: loops=2, warmups=21: 96.8 ms +- 4.4 ms
+Overall:
+
+.. image:: pypy_warmups/dulwich_log.png
+
+Cycle of 3.6 values (average of runs, skip 21, limit to 18):
+
+.. image:: pypy_warmups/dulwich_log_cycle.png
+
+Mean:
+
+* loops=2, warmups=21, values=18: 98.6 ms +- 4.7 ms
+* LIMIT: loops=2, warmups=21: 96.8 ms +- 4.4 ms
 
 fannkuch: loops=1, warmups=59, values=40
 ========================================
 
-    long cycle of 40 values: 40, 80, 120, ...
-    loops=1, warmups=59, values=40: 171 ms +- 1 ms
-    LIMIT: loops=1, warmups=59: 171 ms +- 1 ms
+Overall:
+
+.. image:: pypy_warmups/fannkuch.png
+
+Moving average of 25 values (skip 59), very small absolute variation (see the
+Y scale):
+
+.. image:: pypy_warmups/fannkuch_moving_avg25.png
+
+Long cycle of 40 values. Not easy to see using moving average, spikes depend
+on the width of the moving window.
+
+Mean:
+
+* loops=1, warmups=59, values=40: 171 ms +- 1 ms
+* LIMIT: loops=1, warmups=59: 171 ms +- 1 ms
 
 float: loops=4, warmups=25, samples=40
 ======================================
 
-    loops=4, warmups=25, samples=40: 41.0 ms +- 0.4 ms (step1)
-    loops=4, warmups=117: 39.9 ms +- 1.7 ms (step 2)
+Use the suboptimal step 2 to reduce total benchmark runtime, even if the step 3
+is a little bit faster.
 
-    two steps:
-    - values 25..40, around 41 ms
-    - (slow speedup on values 41..116)
-    - values after 117: around 40 ms, with a cycle of ~14 values
+Overall:
 
-genshi_text: loops=8
-====================
+.. image:: pypy_warmups/float.png
 
-    BUG! 19 ms at value 0 => 92 ms at value 250, steady slowdown!
+Step 2, after warmup (average of runs, skip 25, limit 40):
 
-genshi_xml: loops=2
-===================
+.. image:: pypy_warmups/float_step2.png
 
-    BUG! 70 ms at value 0 => 200 ms at value 250, steady slowdown!
+Step 3: cycle of 16 values (average of runs, skip 119, limit 80):
+
+.. image:: pypy_warmups/float_step3.png
+
+Mean:
+
+* Step 2: loops=4, warmups=25, samples=40: 41.0 ms +- 0.4 ms
+* Step 3: loops=4, warmups=119: 39.9 ms +- 1.6 ms
+
+genshi_text: loops=8, BUG!
+==========================
+
+BUG! 19 ms at value 0 => 92 ms at value 250, steady slowdown!
+
+Overall:
+
+.. image:: pypy_warmups/genshi_text.png
+
+genshi_xml: loops=2, BUG!
+=========================
+
+BUG! 70 ms at value 0 => 200 ms at value 250, steady slowdown!
+
+Overall:
+
+.. image:: pypy_warmups/genshi_xml.png
 
 go: loops=2, warmups=87, samples=80
 ===================================
 
-    slow but contiguous optimization!
-    88.3 ms
-    1 run at 75 ms, 9 runs around 87 ms
-    after 87 warmups, cycle of 16 values
-    80 values = 5 cycles
+Overall:
 
-    loops=2, warmups=87, samples=32: 87.4 ms +- 4.9 ms
-    loops=2, warmups=87, samples=80: 87.3 ms +- 5.0 ms
-    LIMIT: loops=2, warmups=87: 87.2 ms +- 5.0 ms
+.. image:: pypy_warmups/go.png
+
+Cycle of 5 values (average of runs, skip 87, limit 80):
+
+.. image:: pypy_warmups/go_cycle.png
+
+Step 2 after warmup (skip 87):
+
+.. image:: pypy_warmups/go_warmup.png
+
+Contiguous optimization (moving average of 50 values, skip 87), but only minor
+optimization (look at the Y scale):
+
+.. image:: pypy_warmups/go_moving_avg50.png
+
+Mean:
+
+* loops=2, warmups=87, samples=32: 87.4 ms +- 4.9 ms
+* loops=2, warmups=87, samples=80: 87.3 ms +- 5.0 ms
+* LIMIT: loops=2, warmups=87: 87.2 ms +- 5.0 ms
 
 hexiom: loops=64, warmups=36, samples=50
 ========================================
 
-    cycle of 25 values
-    loops=64, warmups=36, samples=50: 2.32 ms +- 0.04 ms
-    LIMIT: loops=64, warmups=36: 2.33 ms +- 0.05 ms
+Only compute 2 cycles instead of 5 to limit the benchmark total runtime, since
+the cycle of long (25 values).
+
+Overall:
+
+.. image:: pypy_warmups/hexiom.png
+
+Cycle of 25 values (average of runs, skip 36 , limit 127):
+
+.. image:: pypy_warmups/hexiom_cycle.png
+
+Mean:
+
+* loops=64, warmups=36, samples=50: 2.32 ms +- 0.04 ms
+* LIMIT: loops=64, warmups=36: 2.33 ms +- 0.05 ms
 
 hg_startup: loops=1, warmups=4, samples=10
 ==========================================
 
-    loops=1, warmups=4, samples=10: 243 ms +- 1 ms
-    LIMIT: loops=1, warmups=4: 243 ms +- 1 ms
-    Each run has different speed, so use more runs
+Overall:
+
+.. image:: pypy_warmups/hg_startup.png
+
+Step 2 (skip 4, limit 10):
+
+.. image:: pypy_warmups/hg_startup_step2.png
+
+Mean:
+
+* loops=1, warmups=4, samples=10: 243 ms +- 1 ms
+* LIMIT: loops=1, warmups=4: 243 ms +- 1 ms
 
 TODO
 ====
