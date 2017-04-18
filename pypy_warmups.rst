@@ -78,12 +78,22 @@ Moving average (50 values) of runs:
 chameleon: loops=32, warmups=6, samples=10
 ==========================================
 
-* cycle of 2 values (^v^v^v...)
+Overall:
+
+.. image:: pypy_warmups/chameleon.png
+
+Short cycle of 2 values (skip first 6 values, limit to 30 values):
+
+.. image:: pypy_warmups/chameleon_short_cycle.png
+
+Large cycle of 42 values (Moving average 1 value, skip first 6 values):
+
+.. image:: pypy_warmups/chameleon_large_cycle.png
+
+Mean:
+
 * loops=32, warmups=6, samples=10: 7.05 ms +- 0.23 ms
-
-* larger cycle of 42 values (/^^\_/^^\_/^^\_...)
 * loops=32, warmups=6, samples=42: 7.02 ms +- 0.20 ms
-
 * LIMIT: loops=32, warmups=6: 7.01 ms +- 0.20 ms
 
 chaos: loops=16, warmups=20, samples=25
