@@ -518,8 +518,19 @@ Enable all runtime debug checks in strict mode::
 Python builtin types
 ====================
 
+Builtin scalar types:
+
 * bool, int, float, complex, bytes, str
-* tuple, list, dict, set, frozenset
+
+Builtin container types:
+
+* Sequence: tuple, list
+* Mapping: dict
+* Set: frozenset, set
+
+Singletons:
+
+* None, Ellipsis (``...``), False (``bool(0)``), True (``bool(1)``)
 
 
 Python packaging
