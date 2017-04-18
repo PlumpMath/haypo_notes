@@ -334,12 +334,71 @@ Mean:
 * loops=1, warmups=4, values=10: 243 ms +- 1 ms
 * LIMIT: loops=1, warmups=4: 243 ms +- 1 ms
 
+html5lib: loops=2, warmups=50, values=50
+========================================
+
+On 250 values, it seems like PyPy optimizes the code multiple times. Tere are
+at least 3 steps:
+
+* Warmup: 0..56
+* Step 1: 57..158
+* Step 2: 159..249
+
+Use the step 1 which is suboptimal to reduce the benchmark total runtime.
+
+Overall:
+
+.. image:: pypy_warmups/html5lib.png
+
+Moving average of 25 values:
+
+.. image:: pypy_warmups/html5lib_moving_avg25.png
+
+Cycle (runs average, skip 57, limit 50):
+
+.. image:: pypy_warmups/html5lib_cycle.png
+
+Mean:
+
+* loops=2, warmups=50, values=50: **63.8 ms +- 3.6 ms**
+* LIMIT: loops=2, warmups=50: **63.3 ms +- 3.5 ms**
+
+json_dumps: loops=16, warmups=38, values=25
+===========================================
+
+Overall:
+
+.. image:: pypy_warmups/json_dumps.png
+
+Cycle of 5 values (runs average, skip 38, limit 50):
+
+.. image:: pypy_warmups/json_dumps_cycle.png
+
+Mean:
+
+* Sample (5 cycles): loops=16, warmups=38, values=25: **7.38 ms +- 0.15 ms**
+* Sample (10 cycles): loops=16, warmups=38, values=50: **7.39 ms +- 0.16 ms**
+* LIMIT: loops=16, warmups=38: **7.39 ms +- 0.16 ms**
+
+json_loads: loops=256, warmups=27, values=50
+============================================
+
+Overall, +16% spike at value 90, +10% spike at value 190:
+
+.. image:: pypy_warmups/json_loads.png
+
+Step 2 (skip 27, limit 50) with a pike at value 51:
+
+.. image:: pypy_warmups/json_loads_step2.png
+
+Mean:
+
+* Sample: loops=256, warmups=27, values=50: **28.4 us +- 0.2 us**
+* Limit: loops=256, warmups=27: **28.4 us +- 0.4 us**
+
 TODO
 ====
 
-* html5lib: loops=2, warmups=50
-* json_dumps: loops=16
-* json_loads: loops=256
 * logging_format: loops=2048
 * logging_silent: loops=134217728
 * logging_simple: loops=4096
