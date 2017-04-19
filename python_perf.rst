@@ -63,3 +63,24 @@ Mailing list
 
 * `Python speed mailing list
   <https://mail.python.org/mailman/listinfo/speed>`_
+
+Old Python benchmarks
+=====================
+
+The following benchmarks were removed from pyperformance:
+
+* `bm_rietveld.py
+  <https://hg.python.org/benchmarks/file/198c43ca2f5b/performance/bm_rietveld.py>`_:
+  use Google AppEngine and Rietveld application which are not available on PyPI
+* `bm_spitfire.py
+  <https://hg.python.org/benchmarks/file/198c43ca2f5b/performance/bm_spitfire.py>`_:
+  Spitfire project is not available on PyPI
+* `bm_threading.py
+  <https://github.com/python/performance/blob/d9e9b4b075f43f7c81e31062a398054703f5e00e/performance/benchmarks/bm_threading.py>`_
+  (``threading_iterative_count``, ``threading_threaded_count``)
+* `gcbench.py
+  <https://hg.python.org/benchmarks/file/198c43ca2f5b/performance/gcbench.py>`_
+* `pystone.py
+  <https://hg.python.org/benchmarks/file/198c43ca2f5b/performance/pystone.py>`_
+* `tuple_gc_hell.py
+  <https://hg.python.org/benchmarks/file/198c43ca2f5b/performance/tuple_gc_hell.py>`_
