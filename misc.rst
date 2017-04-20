@@ -779,3 +779,46 @@ Yubikey
   https://github.com/prefiks/u2f4moz
 * GitHub: https://github.com/settings/two_factor_authentication/configure click on [Register new device]
 * Firefox plugin doesn't work on Google nor Bitbucket
+
+
+Install FreeBSD CURRENT in a VM
+===============================
+
+* Download ftp://ftp.freebsd.org/pub/FreeBSD/releases/amd64/amd64/ISO-IMAGES/11.0/FreeBSD-11.0-RELEASE-amd64-disc1.iso.xz
+* Uncompress: unxz FreeBSD-11.0-RELEASE-amd64-disc1.iso.xz
+* Create a new VM:
+
+  * Name: FreeBSD
+  * Boot from an ISO: specify the path to the .iso file
+  * System: select Show all, select UNIX, pick FreeBSD 11
+  * 1 cpu, 1 GB of RAM
+  * Disk size: 20 GB
+  * Select network: shared interface, br0
+
+* FreeBSD installer:
+
+
+  * <install>
+  * Keymap: French ISO-8859-1
+  * Hostname: freebsd
+  * Distribution: only keep [*] ports
+  * Partition: auto, <Entire disk>, MBR, Finish, Commit
+  * (choose a root password)
+  * network: configure IPv4, use DHCP, yes, configure IPv6, auto, yes
+  * Time Zone: 8 Europe, 14 France
+  * Date/Time: Skip
+  * Service started at boot: sshd
+  * (no option)
+  * Add a new user: username haypo
+  * Exit: Manual config? No
+  * Reboot
+
+* (After reboot)
+* Log as root
+* type "pkg sudo" and install it
+* run "visudo" and uncomment "%whell ALL.." without password
+* add haypo user to the wheel group: pw group mod wheel -m haypo
+* Relog as haypo
+* sudo pkg install bash git
+* chsh: write /usr/local/bin/bash (check before with "which bash")
+* Delog, log again as haypo
