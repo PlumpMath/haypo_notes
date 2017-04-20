@@ -822,3 +822,22 @@ Install FreeBSD CURRENT in a VM
 * sudo pkg install bash git
 * chsh: write /usr/local/bin/bash (check before with "which bash")
 * Delog, log again as haypo
+
+
+C aliasing
+==========
+
+* ``-fstrict-aliasing`` vs ``-fno-strict-aliasing``
+* ``__restrict__`` (or just ``restrict``)
+* clang "bug": `aliasing bug with union in clang 4.0
+  <https://bugs.llvm.org//show_bug.cgi?id=31928>`_
+* `Understanding Strict Aliasing
+  <http://cellperformance.beyond3d.com/articles/2006/06/understanding-strict-aliasing.html>`_ (Mike Acton, June 1, 2006)
+* `Demystifying The Restrict Keyword
+  <http://cellperformance.beyond3d.com/articles/2006/05/demystifying-the-restrict-keyword.html>`_ (Mike Acton, May 29, 2006)
+* Python 2 slower: the C code base doesn't respect strict aliasing and so must
+  be compiled with ``-fno-strict-aliasing`` (to avoid bugs when the compiler
+  optimizes the code) which is inefficient. The structure of Python C type has
+  been deeply rewritten to fix the root cause.
+* `gcc-help: Missed optimization when using a structure
+  <https://gcc.gnu.org/ml/gcc-help/2013-04/msg00192.html>`_ (2013-04)
