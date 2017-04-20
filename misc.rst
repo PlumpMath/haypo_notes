@@ -832,9 +832,14 @@ C aliasing
 * clang "bug": `aliasing bug with union in clang 4.0
   <https://bugs.llvm.org//show_bug.cgi?id=31928>`_
 * `Understanding Strict Aliasing
-  <http://cellperformance.beyond3d.com/articles/2006/06/understanding-strict-aliasing.html>`_ (Mike Acton, June 1, 2006)
+  <http://cellperformance.beyond3d.com/articles/2006/06/understanding-strict-aliasing.html>`_
+  (Mike Acton, June 1, 2006)
 * `Demystifying The Restrict Keyword
-  <http://cellperformance.beyond3d.com/articles/2006/05/demystifying-the-restrict-keyword.html>`_ (Mike Acton, May 29, 2006)
+  <http://cellperformance.beyond3d.com/articles/2006/05/demystifying-the-restrict-keyword.html>`_
+  (Mike Acton, May 29, 2006)
+* `Type-punning and strict-aliasing
+  <http://blog.qt.io/blog/2011/06/10/type-punning-and-strict-aliasing/>`_
+  (Thiago Macieira, June 2011)
 * Python 2 slower: the C code base doesn't respect strict aliasing and so must
   be compiled with ``-fno-strict-aliasing`` (to avoid bugs when the compiler
   optimizes the code) which is inefficient. The structure of Python C type has
@@ -845,3 +850,40 @@ C aliasing
 Change which fixed a crash after the merged of the new dict implementation
 on a specific platform (don't recall which one!):
 https://github.com/python/cpython/commit/186122ead26f3ae4c2bc9f6715d2a29d339fdc5a
+
+Example::
+
+    #include <stdint.h>
+    #include <stdio.h>
+
+    uint32_t
+    swap_words( uint32_t arg )
+    {
+      uint16_t* const volatile sp = (uint16_t*)&arg;
+      uint16_t        hi = sp[0];
+      uint16_t        lo = sp[1];
+
+      sp[1] = hi;
+      sp[0] = lo;
+
+      return (arg);
+    }
+
+    int main(void)
+    {
+        uint32_t x = 0xabcd1234;
+        uint32_t y = swap_words(x);
+        printf("x=%lx\n", (long unsigned int)x);
+        printf("y=%lx\n", (long unsigned int)y);
+        return 0;
+    }
+
+Bug::
+
+    $ LANG= gcc -O3 x.c -o x -fstrict-aliasing -Wstrict-aliasing=2 && ./x
+    x.c: In function 'swap_words':
+    x.c:7:3: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+       uint16_t* const volatile sp = (uint16_t*)&arg;
+       ^~~~~~~~
+    x=abcd1234
+    y=abcd1234
