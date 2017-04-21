@@ -214,3 +214,23 @@ Test::
     Erreur de segmentation (core dumped)
     $ ls *core*
     python3-27542.core
+
+
+Display a wchar_t string
+========================
+
+Use this macro::
+
+    define wc_print
+    echo "
+    set $c = (wchar_t*)$arg0
+    while ( *$c )
+      if ( *$c > 0x7f )
+        printf "[%x]", *$c
+      else
+        printf "%c", *$c
+      end
+      set $c++
+    end
+    echo "\n
+    end
