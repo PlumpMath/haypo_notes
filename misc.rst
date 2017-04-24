@@ -846,6 +846,13 @@ C aliasing
   been deeply rewritten to fix the root cause.
 * `gcc-help: Missed optimization when using a structure
   <https://gcc.gnu.org/ml/gcc-help/2013-04/msg00192.html>`_ (2013-04)
+* `GCC -fstrict-aliasing documentation
+  <https://gcc.gnu.org/onlinedocs/gcc/Optimize-Options.html#Type-punning>`_
+* `GCC Union documentation
+  <https://gcc.gnu.org/onlinedocs/gcc/Structures-unions-enumerations-and-bit-fields-implementation.html#Structures-unions-enumerations-and-bit-fields-implementation>`_
+* `Detecting Strict Aliasing Violations
+  <http://trust-in-soft.com/wp-content/uploads/2017/01/vmcai.pdf>`_
+  by P. Cuoq et. al.
 
 Change which fixed a crash after the merged of the new dict implementation
 on a specific platform (don't recall which one!):
