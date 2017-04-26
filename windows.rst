@@ -1,8 +1,13 @@
+.. _windows:
+
 ++++++++++++++++++++++++++++++++++++
 Survivor Guide to Develop on Windows
 ++++++++++++++++++++++++++++++++++++
 
 Guide written for Linux developers.
+
+See also :ref:`Python <python>` which contains specific information for Python
+on Windows.
 
 Useful tools
 ============
@@ -56,6 +61,24 @@ Command to mount the Widows "test" directory locally to ``~/mnt``, local
 files will be owned by the user ``haypo:haypo``::
 
     sudo mount.cifs '//192.168.0.14/test' ~/mnt -o 'user=USERNAME,pass=PASSWORD,uid=haypo,gid=haypo'
+
+
+Visual Studio
+=============
+
+Versions:
+
+* 14.0 = Visual Studio 2015
+
+Configure a shell to use the VS C compiler in 64-bit mode::
+
+    "%VS140COMNTOOLS%\..\..\VC"\vcvarsall.bat amd64
+
+Argument:
+
+* ``x86``: compile in 32-bit mode
+* ``amd64``: compile in 64-bit mode
+* ``x86_amd64``: cross-compile to 64-bit mode on a 32-bit system
 
 
 See also

@@ -74,6 +74,8 @@ Compile Python extensions on Windows
     set MSSDK=1
     set DISTUTILS_USE_SDK=1
 
+See also :ref:`Windows <windows>`.
+
 
 Build a Python Wheel package on Windows
 =======================================
@@ -110,6 +112,8 @@ Notes:
   Visual Studio 2008 (MSVCR90). Python 3.3 is built using Visual Studio 2010.
 * It looks like Python 3.3 doesn't need ``MSSDK`` and ``DISTUTILS_USE_SDK``
   environment variables anymore.
+
+See also :ref:`Windows <windows>`.
 
 
 Python 3 is better than Python 2
@@ -504,6 +508,8 @@ Commands::
 
 See also: PCbuild/readme.txt.
 
+See also :ref:`Windows <windows>`.
+
 
 Developer mode
 ==============
@@ -812,3 +818,17 @@ pudb
 Put a breakpoint:
 
 * hit 'm', search 'test_api' to open glance.tests.unit.test_api
+
+
+datetime strptime
+=================
+
+Documentation: https://docs.python.org/dev/library/datetime.html#strftime-and-strptime-behavior
+
+Code::
+
+    date = datetime.datetime.strptime(date, '%Y-%m-%d %H:%M:%S %z')
+
+year-month-day hour:minute:second timezone::
+
+    %Y-%m-%d %H:%M:%S %z
