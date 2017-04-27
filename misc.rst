@@ -368,6 +368,8 @@ Misc
 * `MLVPN - MultiLink Virtual Public Network <http://www.mlvpn.fr/>`_
 * `tmux shortcuts & cheatsheet <https://gist.github.com/MohamedAlaa/2961058>`_
 * Docker: https://linuxfr.org/news/docker-tutoriel-pour-manipuler-les-conteneurs
+* `Forensically <https://29a.ch/photo-forensics/>`_: tools to check if a photo
+  was modified
 
 
 Share files files from Linux to OSX
@@ -894,3 +896,12 @@ Bug::
        ^~~~~~~~
     x=abcd1234
     y=abcd1234
+
+
+tmux
+====
+
+* tmux attach
+* tmux ls
+* CTRL+b c: new window
+* CTRL+b n/CTRL+b p: next/previous window
