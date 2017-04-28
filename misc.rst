@@ -366,7 +366,6 @@ Misc
 
 * `Linux: detect launching of programs <https://stackoverflow.com/questions/6075013/linux-detect-launching-of-programs>`_ (StackOverflow)
 * `MLVPN - MultiLink Virtual Public Network <http://www.mlvpn.fr/>`_
-* `tmux shortcuts & cheatsheet <https://gist.github.com/MohamedAlaa/2961058>`_
 * Docker: https://linuxfr.org/news/docker-tutoriel-pour-manipuler-les-conteneurs
 * `Forensically <https://29a.ch/photo-forensics/>`_: tools to check if a photo
   was modified
@@ -903,5 +902,18 @@ tmux
 
 * tmux attach
 * tmux ls
-* CTRL+b c: new window
-* CTRL+b n/CTRL+b p: next/previous window
+* CTRL+b ...
+
+  - ``d``: detach
+  - ``c``: new window
+  - ``n`` / ``p``: next/previous window
+  - ``:``: open the command line ("prompt")
+  - ``,``: name the window
+  - ``w``: window list
+  - ``&``: kill the window
+
+* Command line or "prompt" (opened by CTRL+b :):
+
+  - list-sessions
+
+* `tmux shortcuts & cheatsheet <https://gist.github.com/MohamedAlaa/2961058>`_
