@@ -636,12 +636,15 @@ Misc
 
 * http://buildbot.python.org/
 
-  * https://github.com/python/buildmaster-config/tree/master/master
   * `CPython 3.6
     <http://buildbot.python.org/all/waterfall?category=3.6.stable&category=3.6.unstable>`_
   * `CPython 3.x (master)
     <http://buildbot.python.org/all/waterfall?category=3.x.stable&category=3.x.unstable>`_
-  * custom build: https://github.com/python/devguide/pull/167
+  * `Custom builders
+    <https://docs.python.org/devguide/buildbots.html#custom-builders>`_
+  * `buildmaster-config
+    <https://github.com/python/buildmaster-config/tree/master/master>`_
+    (configuration)
 
 * GitHub CLA bot: XXX
 
