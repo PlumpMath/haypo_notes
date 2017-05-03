@@ -543,11 +543,13 @@ What Google knowns on you:
 Operating systems
 =================
 
-`Mac OS X versions <https://en.wikipedia.org/wiki/OS_X#Versions>`_:
+`macOS (Mac OS X) versions
+<https://en.wikipedia.org/wiki/MacOS#Release_history>`_:
 
 ==============  ============== ==============  ============
 Mac OS X        Name           Darwin Version  Release Year
 ==============  ============== ==============  ============
+Mac OS X 10.12  Sierra         16.x            2016
 Mac OS X 10.11  El Capitan     15.x            2015
 Mac OS X 10.10  Yosemite       14.x            2014
 Mac OS X 10.9   Mavericks      13.x            2013
