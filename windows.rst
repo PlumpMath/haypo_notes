@@ -28,6 +28,12 @@ Windows console
 * Kill a blocked command (harder than CTRL+c): CTRL + Scroll Lock key. (send a
   ``SIGBREAK`` signal)
 
+Note: On my Lenovo T430 laptop, I have to use the "Fn" key:
+
+* Fn + B: Break
+* Fn + P: Pause
+* Fn + S: SysRq
+
 
 cmd.exe (Windows "shell", Windows console, the MS-DOS black window)
 ===================================================================
