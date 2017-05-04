@@ -835,3 +835,18 @@ Code::
 year-month-day hour:minute:second timezone::
 
     %Y-%m-%d %H:%M:%S %z
+
+
+ensurepip
+=========
+
+* Debian doesn't provide ensurepip:
+https://bugs.debian.org/cgi-bin/bugreport.cgi?bug=732703
+
+  - Random workaround: https://gist.github.com/uranusjr/d03a49767c7c307be5ed
+
+* Fedora, random links:
+
+  - https://github.com/fedora-python/rewheel/issues/2
+  - https://github.com/fedora-python/rewheel/blob/master/python2-ensurepip-rewheel.patch
+
