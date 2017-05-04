@@ -50,6 +50,7 @@ Windows command       UNIX command        Comment
 ``RMDIR /S /Q dir``   ``rm -rf dir``      Remove a directory and its content
 ``cmd > log``         ``cmd > log``       Redirect command stdout into a new ``log`` file
 ``cmd >log 2>&1``     ``cmd >log 2>&1``   Redirect command stdout and stderr into a new ``log`` file
+``cmd >NUL``          ``cmd >/dev/null``  Ignore command stdout (redirect it to null)
 ====================  ==================  ==========================================================
 
 
