@@ -645,6 +645,8 @@ Misc
   * `buildmaster-config
     <https://github.com/python/buildmaster-config/tree/master/master>`_
     (configuration)
+  * `Fork of BuildBot running on buildbot.python.org
+    <https://github.com/python/buildbot/>`_
 
 * GitHub CLA bot: XXX
 

@@ -90,6 +90,12 @@ Argument:
 * ``x86_amd64``: cross-compile to 64-bit mode on a 32-bit system
 
 
+Git configuration file
+======================
+
+Filename: ``C:\Users\haypo\.gitconfig``. Run cmd.exe as administrator to be
+allowed to create symbolic links.
+
 See also
 ========
 
