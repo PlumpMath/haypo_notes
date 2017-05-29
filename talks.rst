@@ -17,6 +17,18 @@ Conferences 2011-today
    :alt: Pycon US 2014 logo
    :target: https://us.pycon.org/
 
+* May 2017, Pycon US at Portland (Oregon, USA)
+
+  - Talk: `Optimizations which made Python 3.6 faster than Python 3.5
+    <https://us.pycon.org/2017/schedule/presentation/487/>`_
+  - Video (Youtube): https://www.youtube.com/watch?v=d65dCD3VH9Q
+  - Slides (PDF): https://github.com/haypo/conf/raw/master/2017-PyconUS/python36_opt.pdf
+
+* May 2017, Language Summit during Pycon US at Portland (Oregon, USA)
+
+  - Talk: Python performance
+  - Slides (PDF): https://github.com/haypo/conf/raw/master/2017-PyconUS/summit.pdf
+
 * February 2017, FOSDEM at Brussels (Belgium)
 
   - Talk: `How to run a stable benchmark
