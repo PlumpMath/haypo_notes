@@ -919,3 +919,12 @@ tmux
   - list-sessions
 
 * `tmux shortcuts & cheatsheet <https://gist.github.com/MohamedAlaa/2961058>`_
+
+
+Debug Python
+============
+
+* Add printf(...) of fprintf(stderr, ...)
+* Comment, remove code, add #if 0 ... #endif
+* Run git bisect
+* Use my new script to bisect test *methods*
