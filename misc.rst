@@ -928,3 +928,5 @@ Debug Python
 * Comment, remove code, add #if 0 ... #endif
 * Run git bisect
 * Use my new script to bisect test *methods*
+* gdb
+* pdb, pudb
