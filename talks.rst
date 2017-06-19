@@ -19,6 +19,7 @@ Conferences 2011-today
 
 * May 2017, Pycon US at Portland (Oregon, USA)
 
+  - LWN article: `Making Python faster <https://lwn.net/Articles/725114/>`_
   - Talk: `Optimizations which made Python 3.6 faster than Python 3.5
     <https://us.pycon.org/2017/schedule/presentation/487/>`_
   - Video (Youtube): https://www.youtube.com/watch?v=d65dCD3VH9Q
@@ -26,6 +27,7 @@ Conferences 2011-today
 
 * May 2017, Language Summit during Pycon US at Portland (Oregon, USA)
 
+  - LWN article: `Keeping Python competitive <https://lwn.net/Articles/723752/#723949>`_
   - Talk: Python performance
   - Slides (PDF): https://github.com/haypo/conf/raw/master/2017-PyconUS/summit.pdf
 

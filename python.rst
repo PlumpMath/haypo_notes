@@ -492,6 +492,11 @@ Python for PHP developers
 Compile CPython on Windows
 ==========================
 
+See also :ref:`Windows <windows>`.
+
+Compile CPython 3 on Windows
+----------------------------
+
 To build the Python ssl extension:
 
 Need:
@@ -508,7 +513,14 @@ Commands::
 
 See also: PCbuild/readme.txt.
 
-See also :ref:`Windows <windows>`.
+Compile CPython 2.7 on Windows
+------------------------------
+
+* Install Visual Studio 2008: XXX how to get it?
+* Open a Visual Studio 2008 Prompt
+* In this prompt, run ``VS\9.0\build.bat -e -d -p x64`` to build Python 2.7 in
+  debug mode for 64-bit, and install dependencies like OpenSSL sources if
+  needed
 
 
 Developer mode
