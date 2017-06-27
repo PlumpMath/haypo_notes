@@ -67,6 +67,9 @@ About me
   developer since January 2010, he eats bugs for breakfast and reviews patches
   for dinner. On his free time, he shares code of open source projects on
   Bitbucket and Github.
+* I got an award by the OpenStack project for my work on porting all OpenStack
+  unit tests, one by one, to Python 3: "The Infinite Rebase Shield".
+  http://superuser.openstack.org/articles/openstack-community-contributor-awards-recognize-unsung-heroes/
 * I got a `PSF Community Service Award
   <https://www.python.org/community/awards/psf-awards/#august-2015>`_ in August
   2015 for my work on CPython
