@@ -19,6 +19,9 @@ Contents:
    victor_stinner.rst
    contributions.rst
    python.rst
+   cpython.rst
+   python_packaging.rst
+   python3.rst
    python_perf.rst
    pypy_warmups.rst
    unicode.rst
