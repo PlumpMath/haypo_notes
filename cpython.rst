@@ -72,6 +72,43 @@ Python infrastructure
 * http://www.pythontest.net/ used by the test suite, see
   https://github.com/python/pythontestdotnet/
 
+Services used by unit tests
+---------------------------
+
+pythontest.net services:
+
+* test_urllib2net: http://www.pythontest.net/index.html#frag, tcp/80 (HTTP)
+* FTP: ftp://www.pythontest.net/README
+* Copies of unicode text files like http://www.pythontest.net/unicode/EUC-CN.TXT
+* test_hashlib test files like http://www.pythontest.net/hashlib/blake2b.txt
+* test_httplib: self-signed.pythontest.net, tcp/443 (HTTPS)
+* test_robotparser: http://www.pythontest.net/elsewhere/robots.txt
+* test_socket: испытание.pythontest.net
+
+See `pythontestdotnet <https://github.com/python/pythontestdotnet>`_: source of
+pythontest.net (resources used for Python test suite).
+
+snakebite.net::
+
+    # Testing connect timeout is tricky: we need to have IP connectivity
+    # to a host that silently drops our packets.  We can't simulate this
+    # from Python because it's a function of the underlying TCP/IP stack.
+    # So, the following Snakebite host has been defined:
+    blackhole = resolve_address('blackhole.snakebite.net', 56666)
+
+    # Blackhole has been configured to silently drop any incoming packets.
+    # No RSTs (for TCP) or ICMP UNREACH (for UDP/ICMP) will be sent back
+    # to hosts that attempt to connect to this address: which is exactly
+    # what we need to confidently test connect timeout.
+
+    # However, we want to prevent false positives.  It's not unreasonable
+    # to expect certain hosts may not be able to reach the blackhole, due
+    # to firewalling or general network configuration.  In order to improve
+    # our confidence in testing the blackhole, a corresponding 'whitehole'
+    # has also been set up using one port higher:
+    whitehole = resolve_address('whitehole.snakebite.net', 56667)
+
+
 Package Index (PyPI)
 --------------------
 
