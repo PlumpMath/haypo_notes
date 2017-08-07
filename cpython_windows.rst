@@ -58,10 +58,10 @@ Compile the master branch
 
 To build the Python ssl extension:
 
-Need:
+Requirements:
 
 * Visual Studio 2015
-* CPython source code: get it using Git
+* CPython source code: get it using Git, or download a ZIP on GitHub.com
 
 Commands::
 
@@ -72,6 +72,10 @@ See also: ``PCbuild/readme.txt``.
 
 Compile CPython 2.7
 ===================
+
+Python 2.7 is stuck forever on Visual Studio 2008 to not break the ABI, to keep
+the backward compatibility with all built extensions on the Python cheeseshop
+(PyPI).
 
 Compile CPython 2.7 on Windows using Visual Studio 2008 and 2010
 ----------------------------------------------------------------
