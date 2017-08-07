@@ -32,6 +32,12 @@ See also: PCbuild/readme.txt.
 Compile CPython 2.7 on Windows
 ------------------------------
 
+While Visual Studio 2008 is enough to build a basic Python 2.7 binary without
+OpenSSL nor Tkinter, installing Visual Studio 2008 **and** Visual Studio 2010
+is recommended to get all dependencies including Tkinter.
+
+Steps:
+
 * Install Visual Studio 2008: XXX how to get it?
 * Open a Visual Studio 2008 Prompt
 * In this prompt, run ``VS\9.0\build.bat -e -d -p x64`` to build Python 2.7 in

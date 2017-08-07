@@ -75,6 +75,12 @@ files will be owned by the user ``haypo:haypo``::
 Visual Studio
 =============
 
+Flavors:
+
+* Express
+* Professional: enough to build Python
+* Ultimate
+
 Versions:
 
 =============  ======  ========
