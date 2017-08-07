@@ -4,46 +4,7 @@
 CPython
 +++++++
 
-
-Compile CPython on Windows
-==========================
-
-See also :ref:`Windows <windows>`.
-
-Compile CPython 3 on Windows
-----------------------------
-
-To build the Python ssl extension:
-
-Need:
-
-* Visual Studio 2015 (for Python 3.6)
-* CPython source code: get it using Mercurial (TortoiseHG on Windows)
-* svn.exe in PATH: install TortoiseSVN, but check the [x] command line tools in
-  the installer
-* ActivePerl: Community Edition, 64-bit
-
-Commands::
-
-    PCbuild\build -p x64 -d -e
-
-See also: PCbuild/readme.txt.
-
-Compile CPython 2.7 on Windows
-------------------------------
-
-While Visual Studio 2008 is enough to build a basic Python 2.7 binary without
-OpenSSL nor Tkinter, installing Visual Studio 2008 **and** Visual Studio 2010
-is recommended to get all dependencies including Tkinter.
-
-Steps:
-
-* Install Visual Studio 2008: XXX how to get it?
-* Open a Visual Studio 2008 Prompt
-* In this prompt, run ``VS\9.0\build.bat -e -d -p x64`` to build Python 2.7 in
-  debug mode for 64-bit, and install dependencies like OpenSSL sources if
-  needed
-
+See also :ref:`Compile CPython on Windows <cpython-windows>`.
 
 Developer mode
 ==============

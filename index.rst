@@ -20,6 +20,7 @@ Contents:
    contributions.rst
    python.rst
    cpython.rst
+   cpython_windows.rst
    python_packaging.rst
    python3.rst
    python_perf.rst

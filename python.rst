@@ -9,13 +9,15 @@ The Python programming language
    :align: right
    :target: http://www.python.org/
 
-See also:
+Python articles
+===============
 
-* :ref:`CPython <cpython>`
 * :ref:`Python 3 <python3>`
 * :ref:`Python packaging <python_packaging>`
 * :ref:`Python performance <python-perf>`
 * :ref:`Unicode in Python 2 and Python 3 <python-unicode>`
+* :ref:`CPython <cpython>`
+* :ref:`Compile CPython on Windows <cpython-windows>`
 
 
 History of Python releases
