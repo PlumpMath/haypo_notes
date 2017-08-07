@@ -39,6 +39,11 @@ See also :ref:`Windows <windows>`.
 Build a Python Wheel package on Windows
 =======================================
 
+For Python 2.7, you need: `Download Visual C++ Compiler for Python 2.7
+<https://www.microsoft.com/en-us/download/details.aspx?id=44266>`_.
+
+Steps:
+
 * `Install pip
   <http://www.pip-installer.org/en/latest/installing.html>`_
 * Install wheel using pip::
