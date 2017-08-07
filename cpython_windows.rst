@@ -6,6 +6,19 @@ Compile CPython on Windows
 
 See also :ref:`Windows <windows>` and :ref:`CPython <cpython>`.
 
+http://bugs.python.org/issue30350
+
+People
+======
+
+People who understands these things.
+
+* Steve Dower: employed by Microsoft, he is the maintainer of the Windows
+  installer for 2.7, 3.5, 3.6 and master branches
+* Zachary Ware
+* Jeremy Kloth knows the ``PC\VS9.0\`` directory of Python 2.7!
+
+
 Build a Windows VM
 ==================
 
@@ -35,6 +48,8 @@ Dependencies
 * Python 2.7 needs dependencies from `svn.python.org/projects/external
   <http://svn.python.org/projects/external/>`_ using Subversion.
 
+In 2016, Perl was need to build OpenSSL. But it's no more required.
+
 See ``PCBuild/get_externals.bat``.
 
 
@@ -47,12 +62,6 @@ Need:
 
 * Visual Studio 2015
 * CPython source code: get it using Git
-
-XXX old requirements, still needed?
-
-* svn.exe in PATH: install TortoiseSVN, but check the [x] command line tools in
-  the installer
-* ActivePerl: Community Edition, 64-bit
 
 Commands::
 
@@ -81,13 +90,19 @@ Requirements:
 * Visual Studio 2008 Professional. Visual Studio 2008 Express works too, but
   doesn't provide a 64-bit compiler.
 * Visual Studio 2010 Professional. Maybe a lighter flavor works, I didn't try.
+* TortoiseSVN to get ``svn.exe`` in PATH to download Python dependencies:
+  don't forget to check the ``[x] command line tools`` checkbox in the
+  installer
 
-Steps:
+Compile Python in the command line:
 
 * Open a Visual Studio 2010 Prompt
 * In this prompt, run ``PCBuild\build.bat -e -d -p x64`` to build Python 2.7 in
   debug mode for 64-bit, and install dependencies like OpenSSL, Tcl and Tk
   sources.
+
+Compile Python in the IDE: open the ``PCbuild\pcbuild.sln`` solution in Visual
+Studio.
 
 Compile CPython 2.7 on Windows using Visual Studio 2008
 -------------------------------------------------------
@@ -103,3 +118,8 @@ Without Visual Studio 2010, some features don't work, like Tkinter.
   needed
 
 
+Windows Subsystem for Linux: WSL
+================================
+
+Ubuntu running on Windows 10 using a thin layer to emulate the Linux kernel on
+top of the Windows kernel.
