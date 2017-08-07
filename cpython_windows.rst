@@ -6,6 +6,13 @@ Compile CPython on Windows
 
 See also :ref:`Windows <windows>` and :ref:`CPython <cpython>`.
 
+Build a Windows VM
+==================
+
+* Windows 10 or newer is recommanded
+* 60 GB of disk space or more is recommanded
+
+
 Python and Visual Studio version matrix
 =======================================
 
@@ -15,6 +22,7 @@ Python version    Visual Studio
 Python 2.7        2008 **and** 2010
 3.5, 3.6, master  2015
 ================  =================
+
 
 Dependencies
 ============
@@ -28,6 +36,7 @@ Dependencies
   <http://svn.python.org/projects/external/>`_ using Subversion.
 
 See ``PCBuild/get_externals.bat``.
+
 
 Compile the master branch
 =========================
@@ -50,6 +59,7 @@ Commands::
     PCbuild\build -p x64 -d -e
 
 See also: ``PCbuild/readme.txt``.
+
 
 Compile CPython 2.7
 ===================
