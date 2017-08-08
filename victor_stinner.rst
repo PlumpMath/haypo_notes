@@ -1,8 +1,8 @@
 .. _victor-stinner:
 
-++++++++++++++
-Victor Stinner
-++++++++++++++
+++++++++++++++++++++++++++
+Victor Stinner: Contact Me
+++++++++++++++++++++++++++
 
 I'm currently working for Red Hat since October 2013. I joined eNovance which
 was acquired by Red Hat in 2014. I am working on the OpenStack project, one of
