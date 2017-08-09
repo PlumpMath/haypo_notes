@@ -42,20 +42,19 @@ Python infrastructure
 Services used by unit tests
 ---------------------------
 
-pythontest.net services:
+* pythontest.net services:
 
-* test_urllib2net: http://www.pythontest.net/index.html#frag, tcp/80 (HTTP)
-* FTP: ftp://www.pythontest.net/README
-* Copies of unicode text files like http://www.pythontest.net/unicode/EUC-CN.TXT
-* test_hashlib test files like http://www.pythontest.net/hashlib/blake2b.txt
-* test_httplib: self-signed.pythontest.net, tcp/443 (HTTPS)
-* test_robotparser: http://www.pythontest.net/elsewhere/robots.txt
-* test_socket: испытание.pythontest.net
+  * `pythontestdotnet <https://github.com/python/pythontestdotnet>`_: source of
+    pythontest.net (resources used for Python test suite).
+  * test_urllib2net: http://www.pythontest.net/index.html#frag, tcp/80 (HTTP)
+  * FTP: ftp://www.pythontest.net/README
+  * Copies of unicode text files like http://www.pythontest.net/unicode/EUC-CN.TXT
+  * test_hashlib test files like http://www.pythontest.net/hashlib/blake2b.txt
+  * test_httplib: self-signed.pythontest.net, tcp/443 (HTTPS)
+  * test_robotparser: http://www.pythontest.net/elsewhere/robots.txt
+  * test_socket: испытание.pythontest.net
 
-See `pythontestdotnet <https://github.com/python/pythontestdotnet>`_: source of
-pythontest.net (resources used for Python test suite).
-
-snakebite.net::
+* snakebite.net::
 
     # Testing connect timeout is tricky: we need to have IP connectivity
     # to a host that silently drops our packets.  We can't simulate this
@@ -75,6 +74,11 @@ snakebite.net::
     # has also been set up using one port higher:
     whitehole = resolve_address('whitehole.snakebite.net', 56667)
 
+* news.trigofacile.com:
+
+  * Used by test_nntplib
+  * NNTP (tcp/119) and and NNTP/SSL (tcp/563)
+  * Server administrator: julien@trigofacile.com
 
 Package Index (PyPI)
 --------------------
