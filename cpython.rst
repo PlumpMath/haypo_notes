@@ -80,6 +80,14 @@ Services used by unit tests
   * NNTP (tcp/119) and and NNTP/SSL (tcp/563)
   * Server administrator: julien@trigofacile.com
 
+* ipv6.google.com:
+
+  * test_ssl uses it to test IPv6: HTTP (tcp/80) and HTTPS (tcp/443)
+
+* sha256.tbs-internet.com:
+
+  * test_ssl uses it to test x509 certificate signed by SHA256: HTTPS (tcp/443)
+
 Package Index (PyPI)
 --------------------
 
