@@ -186,7 +186,7 @@ Embedded libraries
   * Rationale: https://mail.python.org/pipermail/python-dev/2017-June/148287.html
   * Used on Windows and macOS, Linux distributions use system libexpat
   * Version: search for ``XML_MAJOR_VERSION`` in ``Modules/expat/expat.h``
-  * Script to update it: XXX
+  * Script to update it: see attached script to https://bugs.python.org/issue30947
 
 * Modules/zlib/: copy of `zlib <https://zlib.net/>`_
 
@@ -196,9 +196,14 @@ Embedded libraries
 
 * ``Modules/_ctypes/libffi/``: copy of `libffi <https://sourceware.org/libffi/>`_
 
-  * Removed from Python 3.7
+  * Removed from Python 3.7: https://bugs.python.org/issue27979
 
 * Windows and macOS installers include OpenSSL (binary library)
+
+  * Windows version: search for ``openssl-`` in ``PCbuild/get_externals.bat``
+  * macOS version: search for ``openssl-`` in ``Mac/BuildScript/build-installer.py``
+  * See also: http://python-security.readthedocs.io/ssl.html#openssl-versions
+  * See also: https://www.python.org/dev/peps/pep-0543/
 
 See also `cpython-bin-deps <https://github.com/python/cpython-bin-deps>`_
 and `cpython-source-deps <https://github.com/python/cpython-source-deps>`_.
