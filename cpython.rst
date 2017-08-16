@@ -187,12 +187,14 @@ Embedded libraries
   * Used on Windows and macOS, Linux distributions use system libexpat
   * Version: search for ``XML_MAJOR_VERSION`` in ``Modules/expat/expat.h``
   * Script to update it: see attached script to https://bugs.python.org/issue30947
+  * Recent update: https://bugs.python.org/issue30947
 
 * Modules/zlib/: copy of `zlib <https://zlib.net/>`_
 
   * Version: ``ZLIB_VERSION`` in ``Modules/zlib/zlib.h``
   * Used on Windows and macOS, Linux distributions use system zlib
   * Script to update it: XXX
+  * Recent update: https://bugs.python.org/issue29169
 
 * ``Modules/_ctypes/libffi/``: copy of `libffi <https://sourceware.org/libffi/>`_
 
