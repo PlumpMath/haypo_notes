@@ -177,3 +177,28 @@ Developer mode::
 
 See also ``PYTHONASYNCIODEBUG=1`` for asyncio.
 
+
+Embedded libraries
+==================
+
+* Modules/expat/: copy of `libexpat <https://github.com/libexpat/libexpat/>`_
+
+  * Rationale: https://mail.python.org/pipermail/python-dev/2017-June/148287.html
+  * Used on Windows and macOS, Linux distributions use system libexpat
+  * Version: search for ``XML_MAJOR_VERSION`` in ``Modules/expat/expat.h``
+  * Script to update it: XXX
+
+* Modules/zlib/: copy of `zlib <https://zlib.net/>`_
+
+  * Version: ``ZLIB_VERSION`` in ``Modules/zlib/zlib.h``
+  * Used on Windows and macOS, Linux distributions use system zlib
+  * Script to update it: XXX
+
+* ``Modules/_ctypes/libffi/``: copy of `libffi <https://sourceware.org/libffi/>`_
+
+  * Removed from Python 3.7
+
+* Windows and macOS installers include OpenSSL (binary library)
+
+See also `cpython-bin-deps <https://github.com/python/cpython-bin-deps>`_
+and `cpython-source-deps <https://github.com/python/cpython-source-deps>`_.
