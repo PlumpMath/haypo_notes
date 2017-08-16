@@ -204,8 +204,8 @@ Embedded libraries
 
   * Windows version: search for ``openssl-`` in ``PCbuild/get_externals.bat``
   * macOS version: search for ``openssl-`` in ``Mac/BuildScript/build-installer.py``
-  * See also: http://python-security.readthedocs.io/ssl.html#openssl-versions
-  * See also: https://www.python.org/dev/peps/pep-0543/
+  * See: http://python-security.readthedocs.io/ssl.html#openssl-versions
+  * See: https://www.python.org/dev/peps/pep-0543/
 
 See also `cpython-bin-deps <https://github.com/python/cpython-bin-deps>`_
 and `cpython-source-deps <https://github.com/python/cpython-source-deps>`_.
