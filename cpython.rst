@@ -181,7 +181,22 @@ See also ``PYTHONASYNCIODEBUG=1`` for asyncio.
 Embedded libraries
 ==================
 
-* Modules/expat/: copy of `libexpat <https://github.com/libexpat/libexpat/>`_
+* ``Modules/_ctypes/libffi/``: copy of `libffi <https://sourceware.org/libffi/>`_
+
+  * Removed from Python 3.7: https://bugs.python.org/issue27979
+
+* ``Modules/_ctypes/libffi_osx/``: `libffi <https://sourceware.org/libffi/>`_ for macOS?
+
+  * Version: ``grep PACKAGE_VERSION Modules/_ctypes/libffi_osx/include/fficonfig.h``
+  * Python 2.7-3.6 uses libffi 2.1
+
+* ``Modules/_ctypes/libffi_msvc/``: `libffi <https://sourceware.org/libffi/>`_
+  for Windows (for Microsoft Visual Studio)?
+
+  * Version: second line of ``Modules/_ctypes/libffi_msvc/ffi.h``
+  * Python 2.7-3.6 use libffi 2.0 beta, copied from ctypes-0.9.9.4 in 2006
+
+* ``Modules/expat/``: copy of `libexpat <https://github.com/libexpat/libexpat/>`_
 
   * ``./configure --with-system-expat``
   * Rationale: https://mail.python.org/pipermail/python-dev/2017-June/148287.html
@@ -191,7 +206,7 @@ Embedded libraries
   * Recent update: https://bugs.python.org/issue30947
   * Python 2.7, 3.3-3.6 use libexpat 2.2.1
 
-* Modules/zlib/: copy of `zlib <https://zlib.net/>`_
+* ``Modules/zlib/``: copy of `zlib <https://zlib.net/>`_
 
   * Version: ``ZLIB_VERSION`` in ``Modules/zlib/zlib.h``
   * Used on Windows and macOS (?), Linux distributions use system zlib
@@ -201,11 +216,7 @@ Embedded libraries
   * Python 2.7, 3.4 and 3.5, 3.6 use zlib 1.2.11
   * Python 3.3 uses zlib 1.2.5: https://github.com/python/cpython/pull/3108
 
-* ``Modules/_ctypes/libffi/``: copy of `libffi <https://sourceware.org/libffi/>`_
-
-  * Removed from Python 3.7: https://bugs.python.org/issue27979
-
-* Modules/_decimal/libmpdec/: copy of `libmpdec <http://www.bytereef.org/mpdecimal/>`_
+* ``Modules/_decimal/libmpdec/``: copy of `libmpdec <http://www.bytereef.org/mpdecimal/>`_
 
   * Option: ``./configure --with-system-libmpdec``
   * Included since Python 3.3 for _decimal
