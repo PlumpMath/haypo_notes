@@ -183,22 +183,40 @@ Embedded libraries
 
 * Modules/expat/: copy of `libexpat <https://github.com/libexpat/libexpat/>`_
 
+  * ``./configure --with-system-expat``
   * Rationale: https://mail.python.org/pipermail/python-dev/2017-June/148287.html
   * Used on Windows and macOS, Linux distributions use system libexpat
   * Version: search for ``XML_MAJOR_VERSION`` in ``Modules/expat/expat.h``
   * Script to update it: see attached script to https://bugs.python.org/issue30947
   * Recent update: https://bugs.python.org/issue30947
+  * Python 2.7, 3.3-3.6 use libexpat 2.2.1
 
 * Modules/zlib/: copy of `zlib <https://zlib.net/>`_
 
   * Version: ``ZLIB_VERSION`` in ``Modules/zlib/zlib.h``
-  * Used on Windows and macOS, Linux distributions use system zlib
+  * Used on Windows and macOS (?), Linux distributions use system zlib
+  * Python zlib module not built if system zlib is older than 1.1.3
   * Script to update it: XXX
   * Recent update: https://bugs.python.org/issue29169
+  * Python 2.7, 3.4 and 3.5, 3.6 use zlib 1.2.11
+  * Python 3.3 uses zlib 1.2.5: https://github.com/python/cpython/pull/3108
 
 * ``Modules/_ctypes/libffi/``: copy of `libffi <https://sourceware.org/libffi/>`_
 
   * Removed from Python 3.7: https://bugs.python.org/issue27979
+
+* Modules/_decimal/libmpdec/: copy of `libmpdec <http://www.bytereef.org/mpdecimal/>`_
+
+  * Option: ``./configure --with-system-libmpdec``
+  * Included since Python 3.3 for _decimal
+  * Maintained by Stefan Krah
+  * Version: ``MPD_VERSION`` in ``Modules/_decimal/libmpdec/mpdecimal.h``
+  * Used on all platforms
+  * Script to update: XXX
+  * Recent update: https://bugs.python.org/issue26621
+  * Python 3.6 uses libmpdec 2.4.2 (released at february 2016)
+  * Python 3.4 and 3.5 uses libmpdec 2.4.1
+  * Python 3.3 uses libmpdec 2.4.0
 
 * Windows and macOS installers include OpenSSL (binary library)
 
