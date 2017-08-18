@@ -209,7 +209,7 @@ Embedded libraries
 * ``Modules/zlib/``: copy of `zlib <https://zlib.net/>`_
 
   * Version: ``ZLIB_VERSION`` in ``Modules/zlib/zlib.h``
-  * Used on Windows and macOS (?), Linux distributions use system zlib
+  * Only used on Windows (system zlib is used on macOS and Linux)
   * Python zlib module not built if system zlib is older than 1.1.3
   * Script to update it: XXX
   * Recent update: https://bugs.python.org/issue29169
