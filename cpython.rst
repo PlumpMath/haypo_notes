@@ -181,6 +181,11 @@ See also ``PYTHONASYNCIODEBUG=1`` for asyncio.
 Embedded libraries
 ==================
 
+On security branches, some dependencies are outdated because no more macOS nor
+Windows installer is built. It was decided to not upgrade outdated zlib 1.2.5
+in Python 3.3.7, since it's specific to Windows, and no Windows user is
+expected to build his/her own Python 3.3 anymore.
+
 * ``Modules/_ctypes/libffi/``: copy of `libffi <https://sourceware.org/libffi/>`_
 
   * Removed from Python 3.7: https://bugs.python.org/issue27979
