@@ -17,6 +17,7 @@ Contents:
    talks.rst
    old_projects.rst
    victor_stinner.rst
+   python_contrib.rst
    contributions.rst
    python.rst
    cpython.rst

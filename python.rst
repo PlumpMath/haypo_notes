@@ -18,6 +18,7 @@ Python articles
 * :ref:`Unicode in Python 2 and Python 3 <python-unicode>`
 * :ref:`CPython <cpython>`
 * :ref:`Compile CPython on Windows <cpython-windows>`
+* :ref:`My contributions to Python <python-contrib>`
 
 
 History of Python releases
