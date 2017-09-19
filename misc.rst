@@ -607,6 +607,11 @@ Mac OS X 10.4   Tiger          8.x             2004
   * FreeBSD 7: 2008-02
   * FreeBSD 6.2: 2007-01
 
+* `Debian releases <https://www.debian.org/releases/>`_:
+
+  * Debian 9 "Stretch": June 17th, 2017
+  * Debian 8 "Jessie": April 26th, 2015
+
 Programming advices
 ===================
 
@@ -930,3 +935,22 @@ Debug Python
 * Use my new script to bisect test *methods*
 * gdb
 * pdb, pudb
+
+NFS
+===
+
+Server side
+-----------
+
+* ``/etc/exports``: list of shared directories
+* ``sudo exportfs -af``: reload NFS configuration (like ``/etc/exports``)
+
+Client side
+------------
+
+* Mount: ``sudo mount -t nfs -o soft smithers:/server/shared/directory /local/mount/point``.
+  The ``soft`` option allows NFS to make syscalls failing if the server is no
+  more reachable.
+* Unmount: ``sudo umount -f /local/mount/point``, ``-f`` allows to unmount
+  even if the server is unreachable.
+
