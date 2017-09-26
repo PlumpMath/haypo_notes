@@ -37,6 +37,7 @@ Contents:
    windows.rst
    gdb.rst
    misc.rst
+   brainstorm_cpython_tutorial.rst
 
 
 Indices and tables
