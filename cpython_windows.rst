@@ -29,17 +29,16 @@ Build a Windows VM
 Python and Visual Studio version matrix
 =======================================
 
-================  =================
-Python version    Visual Studio
-================  =================
-Python 2.7        2008 **and** 2010
-3.5, 3.6, master  2015
-================  =================
+===================  =======================
+Python version       Visual Studio
+===================  =======================
+Python 2.7           VS 2008 **and** VS 2010
+Python 3.4           VS 2010
+Python 3.5 and 3.6   VS 2015
+Python 3.7 (master)  VS 2015 or VS 2017
+===================  =======================
 
-Python 3.3 and 3.4 use VS 2013? I failed to build Python 3.4 using VS 2015
-even after VS 2015 upgraded the solution to VS 2015 format.
-
-python.org binaries:
+python.exe binaries delivered by python.org:
 
 * Python 2.7.13 (64-bit): [MSC v.1500 64 bit (AMD64)] on win32 -- VS 2008
 * Python 3.4.3 (64-bit): [MSC v.1600 64 bit (AMD64)] on win32 -- VS 2010
