@@ -42,14 +42,27 @@ Milestones
 Milestone 1: open bar
 ---------------------
 
+* No need to create an account
+* Don't track progress
 * PoC website with "basic setup" and "GitHub and BPO setup" quests
 * DB schema: user
-* Add users: user login, password, optional BPO nick, optional GH nick
+* Add users: user login, contact email, password, optional BPO nick,
+  optional GH nick
 * Add quests: (quest name)
 * Add missions: (quest name, mission name)
 
+Theme
+-----
+
+* Theme: (theme name)
+* Theme item: (theme name, item name, picture path)
+
 Milestone 2: add inventory, self validation
 -------------------------------------------
+
+"You need to complete mission XXX to access to this quest."
+
+"You need to complete mission XXX to access to this mission."
 
 * Add quest_locks: (quest name, needed item) x N
 * Add quest_items: (quest name, given item) x N
@@ -62,7 +75,16 @@ Milestone 3: add mentors
 
 * mentors table: (student login, mentor login) x N
 * a student cannot validate a step him/herself if he/she has at least one mentor
+* a student has to accept to be mentored
 * valitate_mission(user login)
+
+Milestone 4: tool
+-----------------
+
+* REST API
+* user private token/cookie
+* (quest name, mission name, user items)
+* action: validate a mission
 
 Random notes
 ============
@@ -91,4 +113,4 @@ Random notes
   * help to compile Python
   * validate some steps?
 
-* A mission can just be text to read, for diversity, PoC for example
+* A mission can just be text to read, for diversity, CoC for example

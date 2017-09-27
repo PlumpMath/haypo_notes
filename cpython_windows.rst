@@ -36,6 +36,9 @@ Python 2.7        2008 **and** 2010
 3.5, 3.6, master  2015
 ================  =================
 
+Python 3.3 and 3.4 use VS 2013? I failed to build Python 3.4 using VS 2015
+even after VS 2015 upgraded the solution to VS 2015 format.
+
 
 Dependencies
 ============
