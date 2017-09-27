@@ -39,6 +39,13 @@ Python 2.7        2008 **and** 2010
 Python 3.3 and 3.4 use VS 2013? I failed to build Python 3.4 using VS 2015
 even after VS 2015 upgraded the solution to VS 2015 format.
 
+python.org binaries:
+
+* Python 2.7.13 (64-bit): [MSC v.1500 64 bit (AMD64)] on win32 -- VS 2008
+* Python 3.4.3 (64-bit): [MSC v.1600 64 bit (AMD64)] on win32 -- VS 2010
+* Python 3.5.1 (64-bit): [MSC v.1900 64 bit (AMD64)] on win32 -- VS 2015
+* Python 3.6.2rc2 (64-bit): [MSC v.1900 64 bit (AMD64)] on win32 -- VS 2015
+* Python 3.7.0a1 (64-bit): [MSC v.1900 64 bit (AMD64)] on win32 -- VS 2015
 
 Dependencies
 ============
