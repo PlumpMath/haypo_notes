@@ -100,7 +100,6 @@ Unpack file.rpm in a new dir/ subdirectory::
 Code search
 ===========
 
-* http://code.ohloh.net/
 * https://github.com/search/
 * http://searchcode.com/
 * https://codesearch.debian.net/
@@ -954,3 +953,10 @@ Client side
 * Unmount: ``sudo umount -f /local/mount/point``, ``-f`` allows to unmount
   even if the server is unreachable.
 
+
+Release a Python software
+=========================
+
+* pip install check-manifest
+* pip install prospector[pyroma]; prospector
+* zest.releaser
