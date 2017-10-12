@@ -226,7 +226,13 @@ Shell script
   indicate a script might be relying on /bin/sh being bash.
 * `shellcheck <http://www.shellcheck.net/>`_: static analysis and linting tool
   for sh/bash scripts
+* ``$'...'`` interprets escape sequences (like ``\n``) in ``'...'``
 
+Example::
+
+    haypo@selma$ echo $'a\rb'|hexdump -C
+    00000000  61 0d 62 0a                                       |a.b.|
+    00000004
 
 Ftrace
 ======
@@ -960,3 +966,13 @@ Release a Python software
 * pip install check-manifest
 * pip install prospector[pyroma]; prospector
 * zest.releaser
+
+macOS
+=====
+
+Firefox malware: "Websecure WTC", system load near 10, CPU usage higher than
+99%. Remove manually in Firefox extensions.
+
+Anti-malware: don't trust the internet, full of crap. Search in AppStore.
+
+Untested yet: free Bitdefender.
