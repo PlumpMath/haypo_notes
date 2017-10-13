@@ -243,3 +243,14 @@ expected to build his/her own Python 3.3 anymore.
 
 See also `cpython-bin-deps <https://github.com/python/cpython-bin-deps>`_
 and `cpython-source-deps <https://github.com/python/cpython-source-deps>`_.
+
+
+Prashanth Raghu's documentation
+===============================
+
+* `Internals of CPython 2.7
+  <https://intopythoncom.files.wordpress.com/2017/04/internalsofcpython2-7.pdf>`_
+* `Internals of CPython 3.6
+  <https://intopythoncom.files.wordpress.com/2017/04/internalsofcpython3-6-1.pdf>`_
+* `Advanced Internals of CPython 3.6
+  <https://intopythoncom.files.wordpress.com/2017/04/merged.pdf>`_
