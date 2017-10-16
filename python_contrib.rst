@@ -1,3 +1,5 @@
+.. _python-contrib:
+
 ++++++++++++++++++++++++++
 My contributions to Python
 ++++++++++++++++++++++++++
