@@ -126,7 +126,6 @@ less boring messages than ``func1`` or ``func3`` :-) I'm using:
 Gdb
 ===
 
-* http://www.haypocalc.com/wiki/Gdb (in french)!
 * Pretty printer: ``set print pretty on``
 * Enter TUI/exit TUI: CTRL+x a
 * https://sourceware.org/gdb/onlinedocs/gdb/TUI-Keys.html
