@@ -132,7 +132,7 @@ ensurepip
 =========
 
 * Debian doesn't provide ensurepip:
-https://bugs.debian.org/cgi-bin/bugreport.cgi?bug=732703
+  https://bugs.debian.org/cgi-bin/bugreport.cgi?bug=732703
 
   - Random workaround: https://gist.github.com/uranusjr/d03a49767c7c307be5ed
 

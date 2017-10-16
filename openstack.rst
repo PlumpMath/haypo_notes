@@ -67,7 +67,7 @@ Development tools:
 * `hacking
   <https://review.openstack.org/#/q/status:open+project:openstack-dev/hacking,n,z>`_
 * `pbr
-  <https://review.openstack.org/#/q/status:open+project:openstack-dev/pbr,n,z>`_
+  <https://review.openstack.org/#/q/status:open+project:openstack-dev/pbr,n,z>`__
 
 Gerrit
 ======
@@ -105,8 +105,8 @@ Hack OpenStack
 
 * `Gmane: openstack-devel mailing list
   <http://dir.gmane.org/gmane.comp.cloud.openstack.devel>`_
-* `Zuul Status <http://status.openstack.org/zuul/>`_
-  (other link: `Zuul Status <http://zuul.openstack.org/>`_, raw output?)
+* `Zuul Status <http://status.openstack.org/zuul/>`__
+  (other link: `Zuul Status <http://zuul.openstack.org/>`__, raw output?)
 * `Hacking Guide <http://docs.openstack.org/developer/hacking/>`_
 * `Code Review <https://review.openstack.org/>`_
 * `GIT Commit Good Practice
@@ -149,7 +149,7 @@ Tools
 .. seealso::
 
    `nose usage <https://nose.readthedocs.org/en/latest/usage.html>`_
-   and `pbr <http://docs.openstack.org/developer/pbr/>`_ (`github
+   and `pbr <http://docs.openstack.org/developer/pbr/>`__ (`github
    <https://github.com/openstack-dev/pbr>`_).
 
 testr: isolate bug

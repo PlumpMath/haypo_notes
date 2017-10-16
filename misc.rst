@@ -198,7 +198,7 @@ Map of the town Peypin:
 * `Google Maps <https://maps.google.com/maps?ll=43.384146,5.577428&spn=0.005544,0.013368&sll=37.0625,-95.677068&sspn=49.089956,109.511719>`_
 * `Yahoo Maps <https://maps.yahoo.com/place/?lat=43.38477800510547&lon=5.580840110778809&bb=43.391405312706%2C5.564478635787964%2C43.37816556912287%2C5.597201585769653&addr=Peypin%2C France>`_
 * `OSMOSE <http://osmose.openstreetmap.fr/fr/map/#zoom=15&lat=43.38312&lon=5.57648&layer=Mapnik&overlays=FFFFFFFFFFFFFFFFFFFT&item=xxxx&level=1%2C2%2C3&tags=&fixable=&bbox=0.1373291015625%2C42.53689200787317%2C7.0751953125%2C45.98169518512228>`_
-* `BANO <http://layers.openstreetmap.fr/?zoom=16&lat=43.38333&lon=5.5835&layers=B0000FFFFFFFFFFFFFFFFFFFFFFT>`_
+* `BANO <http://layers.openstreetmap.fr/?zoom=16&lat=43.38333&lon=5.5835&layers=B0000FFFFFFFFFFFFFFFFFFFFFFT>`__
 * `KeepItRight <http://keepright.at/report_map.php?lang=fr&ch30=1&ch40=1&ch50=1&ch70=1&ch90=1&ch100=1&ch110=1&ch120=1&ch130=1&ch150=1&ch160=1&ch170=1&ch180=1&ch191=1&ch192=1&ch193=1&ch194=1&ch195=1&ch196=1&ch197=1&ch198=1&ch201=1&ch202=1&ch203=1&ch204=1&ch205=1&ch206=1&ch207=1&ch208=1&ch210=1&ch220=1&ch231=1&ch232=1&ch270=1&ch281=1&ch282=1&ch283=1&ch284=1&ch285=1&ch291=1&ch292=1&ch293=1&ch294=1&ch295=1&ch296=1&ch297=1&ch298=1&ch311=1&ch312=1&ch313=1&ch320=1&ch350=1&ch370=1&ch380=1&ch401=1&ch402=1&ch411=1&ch412=1&ch413=1&number_of_tristate_checkboxes=8&highlight_error_id=0&highlight_schema=0&lat=43.38304&lon=5.57771&zoom=16&show_ign=1&show_tmpign=1&layers=B0T&ch=0%2C30%2C40%2C50%2C70%2C90%2C100%2C110%2C120%2C130%2C150%2C160%2C170%2C180%2C191%2C192%2C193%2C194%2C195%2C196%2C197%2C198%2C201%2C202%2C203%2C204%2C205%2C206%2C207%2C208%2C210%2C220%2C231%2C232%2C270%2C281%2C282%2C283%2C284%2C285%2C291%2C292%2C293%2C294%2C295%2C296%2C297%2C298%2C311%2C312%2C313%2C320%2C350%2C370%2C380%2C401%2C402%2C411%2C412%2C413>`_
 * `viamichelin <http://www.viamichelin.fr/web/Cartes-plans/Carte_plan-Peypin-13124-Bouches_du_Rhone-France-D46A?strLocid=35MTE1NHRhajA2MjdldzF5NjMyaGtuYTQyOTljMTAyMnNjTkRNdU16ZzBNems9Y05TNDFOemMyTnc9PQ==&loc=no&layers=00000001&zoomLevel=12&strCoord=5.57767*43.38439>`_
 * `Cadastre <http://www.cadastre.gouv.fr/scpc/afficherCarteCommune.do?c=80073&dontSaveLastForward&keepVolatileSession=>`_
@@ -213,7 +213,7 @@ Wiki:
 
 * http://wiki.openstreetmap.org/wiki/FR:Quality_assurance
 * http://wiki.openstreetmap.org/wiki/FR:Map_Features
-* `BANO <http://wiki.openstreetmap.org/wiki/WikiProject_France/WikiProject_Base_Adresses_Nationale_Ouverte_(BANO)>`_
+* `BANO <http://wiki.openstreetmap.org/wiki/WikiProject_France/WikiProject_Base_Adresses_Nationale_Ouverte_(BANO)>`__
 
 
 Shell script

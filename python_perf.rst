@@ -28,10 +28,10 @@ Projects
 Python benchmarks:
 
 * `performance <http://pyperformance.readthedocs.io/>`_
-  (`GitHub project <https://github.com/python/performance>`_):
+  (`GitHub project <https://github.com/python/performance>`__):
   Python benchmark suite
 * `perf <http://perf.readthedocs.io/>`_
-  (`GitHub project <https://github.com/haypo/perf>`_):
+  (`GitHub project <https://github.com/haypo/perf>`__):
   Python module to run, analyze and compare benchmarks
 * `performance_results <https://github.com/haypo/performance_results>`_:
   Results of the of performance benchmark suite

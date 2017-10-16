@@ -64,7 +64,7 @@ Talks about asyncio
 * "Tulip: Async I/O for Python 3" by Guido van Rossum, Oct 29, 2013 at Twitter
   University for the San Francisco Python User Group
 
-  - `Youtube video <http://www.youtube.com/watch?v=1coLC-MUCJc>`_
+  - `Youtube video <http://www.youtube.com/watch?v=1coLC-MUCJc>`__
 
 * `Tulip or not Tulip <http://fr.slideshare.net/igalarzab/tulip-28638047>`_
   by Jose Ignacio Galarza, Pycon Spain 2013, Nov 26, 2013. Nice introduction to
@@ -80,12 +80,12 @@ Talks about asyncio
 
 * "Python Async IO Horizon" by Lukasz Dobrzanski, Jan 17, 2014
 
-  - `Slides at Slideshare <http://fr.slideshare.net/ssspiochld/python-async-io-horizon>`_
+  - `Slides at Slideshare <http://fr.slideshare.net/ssspiochld/python-async-io-horizon>`__
 
 * "A deep dive into PEP-3156 and the new asyncio module" by by Saúl Ibarra
   Corretgé, Feb 03, 2014 (FOSDEM, Bruxelles)
 
-  - `Slides at Slideshare <http://fr.slideshare.net/saghul/asyncio>`_
+  - `Slides at Slideshare <http://fr.slideshare.net/saghul/asyncio>`__
 
 
 Tulip projects

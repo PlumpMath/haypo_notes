@@ -40,7 +40,7 @@ Contributions in 2016
   * `Use inspect.signature() on Python 3
     <https://github.com/stefankoegl/python-json-patch/pull/52>`_
   * `Add tox.ini
-    <https://github.com/stefankoegl/python-json-patch/pull/51>`_
+    <https://github.com/stefankoegl/python-json-patch/pull/51>`__
 
 * numpy
 
@@ -72,7 +72,7 @@ Contributions in 2015
 
 * routes:
 
-  - `Add tox.ini <https://github.com/bbangert/routes/pull/55>`_
+  - `Add tox.ini <https://github.com/bbangert/routes/pull/55>`__
   - `Fix BytesWarning in Mapper.generate() <https://github.com/bbangert/routes/pull/56>`_
 
 * pep8: `fix BytesWarning on Python 3 <https://github.com/PyCQA/pep8/pull/459>`_
