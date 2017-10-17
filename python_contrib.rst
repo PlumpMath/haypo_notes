@@ -7,10 +7,16 @@ My contributions to Python
 Reports
 =======
 
-* 2016 Q2: https://haypo.github.io/contrib-cpython-2016q2.html
-* 2016 Q1: https://haypo.github.io/contrib-cpython-2016q1.html
-* 2015 Q4: https://haypo.github.io/contrib-cpython-2015q4.html
-* 2015 Q3: https://haypo.github.io/contrib-cpython-2015q3.html
+* `2017 Q2 (part 3) <https://haypo.github.io/contrib-cpython-2017q2-part3.html>`_
+* `2017 Q2 (part 2) <https://haypo.github.io/contrib-cpython-2017q2-part2.html>`_
+* `2017 Q2 (part 1) <https://haypo.github.io/contrib-cpython-2017q2-part1.html>`_
+* `2017 Q1 <https://haypo.github.io/contrib-cpython-2017q1.html>`_
+* `2016 Q4 <https://haypo.github.io/contrib-cpython-2016q4.html>`_
+* `2016 Q3 <https://haypo.github.io/contrib-cpython-2016q3.html>`_
+* `2016 Q2 <https://haypo.github.io/contrib-cpython-2016q2.html>`_
+* `2016 Q1 <https://haypo.github.io/contrib-cpython-2016q1.html>`_
+* `2015 Q4 <https://haypo.github.io/contrib-cpython-2015q4.html>`_
+* `2015 Q3 <https://haypo.github.io/contrib-cpython-2015q3.html>`_
 
 Python Enhancement Proposals (PEP)
 ==================================
