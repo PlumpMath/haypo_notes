@@ -43,7 +43,6 @@ PEP         Python  Status        Title
 :pep:`564`  3.7     Draft         Add new time functions with nanosecond resolution
 :pep:`540`  3.7     Draft         Add a new UTF-8 mode
 :pep:`511`  3.6     Draft         API for code transformers
-:pep:`510`  3.6     Draft         Specialize functions with guards
 ==========  ======  ============  =================================================
 
 Rejected PEPs
@@ -52,6 +51,7 @@ Rejected PEPs
 ==========  ======  ============  ====================================================================================
 PEP         Python  Status        Title
 ==========  ======  ============  ====================================================================================
+:pep:`510`  3.6     Rejected      Specialize functions with guards
 :pep:`490`  3.6     Rejected      Chain exceptions at C level
 :pep:`433`  3.x     Superseded    Easier suppression of file descriptor inheritance -- supersed by my accepted PEP 446
 :pep:`416`  3.3     Rejected      Add a frozendict builtin type
