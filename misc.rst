@@ -549,20 +549,21 @@ Operating systems
 =================
 
 `macOS (Mac OS X) versions
-<https://en.wikipedia.org/wiki/MacOS#Release_history>`_:
+<https://en.wikipedia.org/wiki/macOS#Release_history>`_:
 
 ==============  ============== ==============  ============
-Mac OS X        Name           Darwin Version  Release Year
+macOS           Name           Darwin Version  Release Year
 ==============  ============== ==============  ============
-Mac OS X 10.12  Sierra         16.x            2016
-Mac OS X 10.11  El Capitan     15.x            2015
-Mac OS X 10.10  Yosemite       14.x            2014
-Mac OS X 10.9   Mavericks      13.x            2013
-Mac OS X 10.8   Mountain Lion  12.x            2012
-Mac OS X 10.7   Lion           11.x            2010
-Mac OS X 10.6   Snow Leopard   10.x            2008
-Mac OS X 10.5   Leopard        9.x             2006
-Mac OS X 10.4   Tiger          8.x             2004
+macOS 10.13     High Sierra    17.x            2017 (June)
+macOS 10.12     Sierra         16.x            2016
+macOS 10.11     El Capitan     15.x            2015
+macOS 10.10     Yosemite       14.x            2014
+macOS 10.9      Mavericks      13.x            2013
+macOS 10.8      Mountain Lion  12.x            2012
+macOS 10.7      Lion           11.x            2010
+macOS 10.6      Snow Leopard   10.x            2008
+macOS 10.5      Leopard        9.x             2006
+macOS 10.4      Tiger          8.x             2004
 ==============  ============== ==============  ============
 
 * `Microsoft Windows versions
