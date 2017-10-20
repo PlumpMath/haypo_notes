@@ -374,6 +374,7 @@ Misc
 * Docker: https://linuxfr.org/news/docker-tutoriel-pour-manipuler-les-conteneurs
 * `Forensically <https://29a.ch/photo-forensics/>`_: tools to check if a photo
   was modified
+* PHP: http://blog.mageekbox.net/
 
 
 Share files files from Linux to OSX
