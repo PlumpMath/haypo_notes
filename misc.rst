@@ -978,3 +978,62 @@ Firefox malware: "Websecure WTC", system load near 10, CPU usage higher than
 Anti-malware: don't trust the internet, full of crap. Search in AppStore.
 
 Untested yet: free Bitdefender.
+
+Rounding
+========
+
+Wikipedia: https://en.wikipedia.org/wiki/Rounding
+
+Rounding modes for floating point numbers:
+
+* ROUND_FLOOR: Round towards minus infinity (-inf).
+
+  * C: ``floor()``
+  * Python: ``math.floor(float)``
+  * Python: ``math.floor(-0.1) == -1``
+  * Python: ``math.floor(0.9) == 0``
+  * For example, used to read a clock.
+
+* ROUND_CEILING: Round towards infinity (+inf).
+
+  * Python: ``math.ceil(float)``
+  * Python: ``math.ceil(0.1) == 1``
+  * Python: ``math.ceil(-0.1) == 0``
+
+* ROUND_HALF_EVEN: Round to nearest with ties going to nearest even integer.
+
+  * For example, used to round from a Python float.
+  * Python: ``round(float)``
+  * Python: ``round(0.5) == 0``
+  * Python: ``round(1.5) == 2``
+  * Python: ``round(2.5) == 2``
+
+* ROUND_UP: Round away from zero.
+
+  * For example, used for timeout. ROUND_CEILING rounds -1e-9 to 0 milliseconds
+    which causes bpo-31786 issue. ROUND_UP rounds -1e-9 to -1 millisecond which
+    keeps the timeout sign as expected. select.poll(timeout) must block for
+    negative values.
+
+* ROUND_DOWN: Round towards zero.
+
+  * C: (int)double, ex: ``(int)0.9 == 0``
+  * Python: ``int(float)``
+  * Python: ``int(0.9) == 0``
+  * Python: ``int(-0.9) == 0``
+
+Other rounding modes (ex: Python decimal module):
+
+* ROUND_HALF_DOWN: Round to nearest with ties going towards zero.
+* ROUND_HALF_UP: Round to nearest with ties going away from zero.
+* ROUND_05UP: Round away from zero if last digit after rounding towards zero
+  would have been 0 or 5; otherwise round towards zero.
+
+IEEE 754 defines 4 modes:
+
+* ROUND_HALF_EVEN: **default mode**
+* ROUND_FLOOR
+* ROUND_CEILING
+* ROUND_DOWN
+
+See also: https://haypo.github.io/pytime.html
