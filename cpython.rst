@@ -241,6 +241,12 @@ expected to build his/her own Python 3.3 anymore.
   * See: http://python-security.readthedocs.io/ssl.html#openssl-versions
   * See: https://www.python.org/dev/peps/pep-0543/
 
+* Windows and macOS installers include `SQLite <https://www.sqlite.org/>`_
+
+  * Recent update: https://bugs.python.org/issue28791
+  * macOS: search for ``SQLite`` in ``Mac/BuildScript/build-installer.py``
+  * Windows: search for ``sqlite-`` in ``PCbuild/get_externals.bat``
+
 See also `cpython-bin-deps <https://github.com/python/cpython-bin-deps>`_
 and `cpython-source-deps <https://github.com/python/cpython-source-deps>`_.
 
