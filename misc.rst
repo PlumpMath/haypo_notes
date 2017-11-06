@@ -1085,3 +1085,11 @@ Others:
 
 See also `Ghosts of Unix Past: a historical search for design patterns
 <https://lwn.net/Articles/411845/>`_ by Neil Brown (October, 2010).
+
+
+Linux: follow process execution
+===============================
+
+* `execsnoop <http://www.brendangregg.com/blog/2014-07-28/execsnoop-for-linux.html>`_
+* `linux process monitoring <http://bewareofgeek.livejournal.com/2945.html>`_:
+  NETLINK_CONNECTOR with CN_IDX_PROC and CN_VAL_PROC commands
