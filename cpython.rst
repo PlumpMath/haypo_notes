@@ -181,6 +181,11 @@ See also ``PYTHONASYNCIODEBUG=1`` for asyncio.
 Embedded libraries
 ==================
 
+See my `external_versions.py
+<https://github.com/haypo/misc/blob/master/cpython/external_versions.py>`_
+script: external version of embedded libraries from CPython source code
+(locally).
+
 On security branches, some dependencies are outdated because no more macOS nor
 Windows installer is built. It was decided to not upgrade outdated zlib 1.2.5
 in Python 3.3.7, since it's specific to Windows, and no Windows user is
