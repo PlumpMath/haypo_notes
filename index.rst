@@ -26,6 +26,7 @@ Contents:
    python3.rst
    python_perf.rst
    pypy_warmups.rst
+   c_language.rst
    unicode.rst
    asyncio.rst
    threads.rst

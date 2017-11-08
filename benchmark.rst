@@ -198,15 +198,6 @@ Help compiler to optimize
  * aliasing: -fno-strict-aliasing or __restrict__
 
 
-Aliasing
-========
-
-* `Understanding Strict Aliasing
-  <http://cellperformance.beyond3d.com/articles/2006/06/understanding-strict-aliasing.html>`_ (Mike Acton, June 1, 2006)
-* `Demystifying The Restrict Keyword
-  <http://cellperformance.beyond3d.com/articles/2006/05/demystifying-the-restrict-keyword.html>`_ (Mike Acton, May 29, 2006)
-
-
 Linux perf
 ==========
 

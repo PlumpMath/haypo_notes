@@ -71,6 +71,7 @@ files will be owned by the user ``haypo:haypo``::
 
     sudo mount.cifs '//192.168.0.14/test' ~/mnt -o 'user=USERNAME,pass=PASSWORD,uid=haypo,gid=haypo'
 
+.. _visual-studio:
 
 Visual Studio
 =============
