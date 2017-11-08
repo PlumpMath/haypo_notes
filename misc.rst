@@ -1021,3 +1021,14 @@ Linux: follow process execution
 * `execsnoop <http://www.brendangregg.com/blog/2014-07-28/execsnoop-for-linux.html>`_
 * `linux process monitoring <http://bewareofgeek.livejournal.com/2945.html>`_:
   NETLINK_CONNECTOR with CN_IDX_PROC and CN_VAL_PROC commands
+
+
+wget mirror
+===========
+
+Download a "Index of" Apache listing and subdirectories, but not parents.
+
+wget --mirror --no-parent -e robots=off URL
+
+robots=off is needed to downloda OpenStack CI logs, since the robots.txt
+disallow everything.
