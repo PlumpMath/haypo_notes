@@ -324,3 +324,42 @@ high quality for contributions: every change must be carefully documented,
 tested and implemented. The implementation can take several rounds until it
 reachs the expected quality and respect a long list of requirements.
 
+Ok, I understand and I am well aware of all these things. But I want to
+contribute, how should I start?
+
+* Bug triage: complete bug report to adjust the title, complete the
+  description, identify impacted Python version and impacted platforms,
+  help to reproduce the bug, or even help to analyze and find the **root bug**.
+
+* Review pull requests: https://github.com/python/cpython/pulls/
+
+  * Make sure that a change is carefully documented. For example, behaviour
+    changes and enhancements must have the "..  versionchanged:: x.y" markup in
+    the documentation of the module.
+    New features must be have the ".. versionadded:: x.y" tag and maybe also
+    documented in "What's New in Python X.Y?" documentation.
+  * The NEWS entry and commit message must first explain the solved problem,
+    then maybe explain the change itself. While the commit message can be
+    technical and very detailed, the NEWS entry should be short and written
+    for end-users who don't care of technical details.
+  * Every change must be tested: exceptions are rare and should usually be
+    justified. Example of exception which doesn't have to be justified: changes
+    only impacting the documentation, changes fixing a typo in a comment.
+  * The backward compatibility is very important. A change must be carefully
+    reviewed to make sure that it doesn't break the backward compatibility.
+    If it does break it, the change must be discussed with enough people
+    to make sure that there is a smooth transition plan.
+  * Feature removals require a DeprecationWarning in Python version N to remove
+    it in version N+1. It's common that a feature is kept longer to avoid
+    breaking the world just being a developer wants the perfection.
+    Python developers must be pragmatic: balance between perfection and
+    usability, very hard choices should be made and usually it takes a a long
+    to time to discuss them :-)
+  * While Python 2 end of line is near (2020), Python 3 changes which make
+    writing code working on Python 2 and Python 3 harder are usually rejected.
+
+* Propose to write a bugfix change (a pull request) for an existing bug report.
+  This task is very hard since usually if a bug report doesn't have a patch,
+  it's because there is a disagrement on the bug itself, or because the bugfix
+  is very hard to implement.
+
