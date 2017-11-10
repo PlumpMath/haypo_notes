@@ -265,3 +265,62 @@ Prashanth Raghu's documentation
   <https://intopythoncom.files.wordpress.com/2017/04/internalsofcpython3-6-1.pdf>`_
 * `Advanced Internals of CPython 3.6
   <https://intopythoncom.files.wordpress.com/2017/04/merged.pdf>`_
+
+
+Contribute to CPython: where should you start?
+==============================================
+
+Documentation:
+
+* https://devguide.python.org/
+* http://cpython-core-tutorial.readthedocs.io/en/latest/
+
+How can you start? Where? That's an hard question. CPython is old and widely
+used: any change must be carefully discussed to remain Python homogenous.
+For bug fixes, the most complex part is the backward compatibility.
+
+It's very hard to find "easy issue". First, just **watch** the current activity
+to get some ideas.
+
+* To start, the best is maybe to look at recent commits to see what is
+  currently done to get some ideas:
+  https://github.com/python/cpython/commits/master
+* Look also at active bugs: see https://bugs.python.org/ homepage, and maybe
+  the second and third pages
+* You may also look at ideas currently discussed on the
+  https://mail.python.org/mailman/listinfo/python-ideas mailing list
+
+Contribute to CPython? What is CPython? CPython is made of many parts:
+
+* CPython source code: basically made of 50% Python and 50% C code
+* Build system: complex tools to build Python on all platforms, Visual
+  Studio project for Windows
+* Windows and macOS installer
+* 233,000 lines of documentation written with Sphinx
+* Documentation translated to multiple languages: french, japanese, and other
+  languages
+* Bug tracker: bugs.python.org which has its own "meta" bug tracker for bugs in
+  the bug tracker :-)
+* GitHub project: pull requests, host the Git repository
+* Travis CI to run the test suite on Linux and check the documentation
+* AppVeyor CI to run the test suite on Windows
+* Buildbot master and many workers to run the test suite as post-commit on
+  many variables architectures and operating systems
+
+There are also many things around Python:
+
+* Devguide: documentation of the CPython development workflow
+* python-dev and python-committers mailing lists
+* #python-dev IRC channel
+* PyPI
+
+Contributing to CPython is hard and it can take up to 2 years until your work
+is released. Are you sure that CPython itself is the best project for you?
+Depending on your interests and skills, you may enjoy better to contribute
+to another popular project like Django or requests.
+
+Contributing to CPython is harder because CPython developers require a very
+high quality for contributions: every change must be carefully documented,
+tested and implemented. The implementation can take several rounds until it
+reachs the expected quality and respect a long list of requirements.
+
