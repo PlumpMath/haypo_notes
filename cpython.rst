@@ -363,3 +363,39 @@ contribute, how should I start?
   it's because there is a disagrement on the bug itself, or because the bugfix
   is very hard to implement.
 
+
+Supported platforms
+===================
+
+PEP 11 lists removed platforms:
+
+* MS-DOS
+* Python 3.4: VMS, OS/2, Windows 2000
+* Python 3.7: IRIX
+
+Windows:
+
+* Windows XP supported in Python 2.7, not supported in Python 3.6
+* Windows 2000 support dropped in Python 3.4
+
+Well supported platforms on Python 3.6 and 2.7:
+
+* Linux
+* Windows: XXX min version?
+* macOS: XXX min version?
+* FreeBSD
+
+Tested by Travis CI and buildbots.
+
+Supported platform with best effort support:
+
+* OpenBSD
+* NetBSD
+* Solaris, OpenIndiana
+* AIX
+
+Platforms not supported officially:
+
+* Cygwin
+* MinGW
+* HP-UX
