@@ -25,7 +25,7 @@ General notes
 =============
 
 The analysis is based on a single data set: `pypy2_571_warmups.json.gz
-<https://github.com/haypo/performance_results/raw/master/2017-04-13-pypy/pypy2_571_warmups.json.gz>`_.
+<https://github.com/vstinner/performance_results/raw/master/2017-04-13-pypy/pypy2_571_warmups.json.gz>`_.
 
 * PyPy2 5.7.1 (revision 1aa2d8e03cdf): 64-bit, static binary
 * perf 1.2 (dev), performance 0.5.5 (dev)

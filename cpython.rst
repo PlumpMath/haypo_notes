@@ -182,7 +182,7 @@ Embedded libraries
 ==================
 
 See my `external_versions.py
-<https://github.com/haypo/misc/blob/master/cpython/external_versions.py>`_
+<https://github.com/vstinner/misc/blob/master/cpython/external_versions.py>`_
 script: external version of embedded libraries from CPython source code
 (locally).
 

@@ -778,7 +778,7 @@ Enable pam_ssh in PAM config:
 Gnome
 =====
 
-My CSS theme for window colored borders: https://github.com/haypo/misc/blob/master/conf/gtk.css
+My CSS theme for window colored borders: https://github.com/vstinner/misc/blob/master/conf/gtk.css
 
 https://wiki.gnome.org/Projects/GnomeShell/CheatSheet
 

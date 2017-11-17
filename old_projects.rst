@@ -83,9 +83,9 @@ Python projects
   to write fuzzing programs. It includes fuzzers for Firefox, ClamAV, Mplayer,
   Python, etc. I am no more working actively on the project, but it still
   works.
-* `pysandbox <https://github.com/haypo/pysandbox>`_: Sandbox to run untrusted
+* `pysandbox <https://github.com/vstinner/pysandbox>`_: Sandbox to run untrusted
   Python code. Project stopped because it is broken by design.
-* `python-ipy <https://github.com/haypo/python-ipy>`_: Python classes and tools
+* `python-ipy <https://github.com/vstinner/python-ipy>`_: Python classes and tools
   for handling of IPv4 and IPv6 addresses and networks. I don't need this
   module anymore and so I am no more interested to maintain it, the new
   maintainer is Jeff Ferland aka autocracy. Python 3.3 now includes `ipaddress
@@ -111,7 +111,7 @@ Other projects
   one bit.
 * `Warmux <http://fr.wikipedia.org/wiki/Warmux>`_, previously known as "Wormux":
   Open source clone of the famous 2D game "Worms" by Team17.
-* `macfly <https://github.com/haypo/macfly>`_: tool allowing to run one or more
+* `macfly <https://github.com/vstinner/macfly>`_: tool allowing to run one or more
   programs with a shifted clock compared to system clock. project written at
   INL for the french CNES (National Centre for Space Studies)
 * happyboom (project deleted): Prototype of a library to

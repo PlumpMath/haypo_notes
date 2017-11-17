@@ -28,10 +28,10 @@ Documentation
 
 * `Faster CPython <http://faster-cpython.readthedocs.org/>`_
   (source code: `faster_cpython at github
-  <https://github.com/haypo/faster_cpython>`_)
+  <https://github.com/vstinner/faster_cpython>`_)
 * `Programming with Unicode <http://unicodebook.readthedocs.org/>`_
   (source code: `unicode_book at github
-  <https://github.com/haypo/unicode_book>`_)
+  <https://github.com/vstinner/unicode_book>`_)
 * `CPython Internals <http://cpython-internals.readthedocs.org/>`_
   (source code: `cpython_internals at bitbucket
   <https://bitbucket.org/haypo/cpython_internals>`_)
@@ -72,7 +72,7 @@ Other Projects
    :align: right
    :target: http://hasard.readthedocs.org/
 
-* `"misc" repository <http://github.com/haypo/misc>`_:
+* `"misc" repository <http://github.com/vstinner/misc>`_:
 
   - my "dot" files, configuration files: bashrc, hgrc, gitconfig, etc.
   - some command line program: apply_patch.py, scm.py

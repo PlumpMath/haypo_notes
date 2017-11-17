@@ -39,7 +39,7 @@ Python
 
 See my conference (in french) "Comprendre les erreurs Unicode" (Pycon FR 2009
 at Paris): `slides (PDF)
-<https://github.com/haypo/conf/blob/master/2009-PyconFR-Paris/comprendre_errurs_unicode.pdf?raw=true>`_
+<https://github.com/vstinner/conf/blob/master/2009-PyconFR-Paris/comprendre_errurs_unicode.pdf?raw=true>`_
 and `video <http://dl.afpy.org/pycon-fr-09/videos/Comprendre_les_erreurs_Unicode.mp4>`_.
 
 Narrow and wide builds, PEP 393

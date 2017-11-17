@@ -29,7 +29,7 @@ Public profiles
 ===============
 
 - `Twitter account <https://twitter.com/VictorStinner>`_
-- `Github profile <http://github.com/haypo/>`_
+- `Github profile <http://github.com/vstinner/>`_
 - `Bitbucket profile <https://bitbucket.org/haypo/>`_
 - `Flickr profile (photos) <http://www.flickr.com/photos/haypo/>`_
 - `Launchpad <https://launchpad.net/~victor-stinner>`_
@@ -60,7 +60,7 @@ About me
 * Pycon US 2014: Python core developer since 2010, I'm the author of various
   Python applications and libraries Python. See my profile on `Bitbucket
   <https://bitbucket.org/haypo/>`_ and and `Github
-  <http://github.com/haypo/>`_.  I'm now working on OpenStack at `Enovance
+  <http://github.com/vstinner/>`_.  I'm now working on OpenStack at `Enovance
   <http://www.enovance.com>`_ (Paris).
 * FOSDEM 2013: Python code developer since 3 years, I love hacking free
   softwares to improve them, especially the Python project.

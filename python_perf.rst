@@ -31,11 +31,11 @@ Python benchmarks:
   (`GitHub project <https://github.com/python/performance>`__):
   Python benchmark suite
 * `perf <http://perf.readthedocs.io/>`_
-  (`GitHub project <https://github.com/haypo/perf>`__):
+  (`GitHub project <https://github.com/vstinner/perf>`__):
   Python module to run, analyze and compare benchmarks
-* `performance_results <https://github.com/haypo/performance_results>`_:
+* `performance_results <https://github.com/vstinner/performance_results>`_:
   Results of the of performance benchmark suite
-* `pymicrobench <https://github.com/haypo/pymicrobench>`_: Collection
+* `pymicrobench <https://github.com/vstinner/pymicrobench>`_: Collection
   of Python microbenchmarks written for CPython.
 * `PyPy benchmarks <https://bitbucket.org/pypy/benchmarks>`_: PyPy benchmark
   suite
