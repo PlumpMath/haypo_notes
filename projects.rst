@@ -67,22 +67,9 @@ Python Projects
 Other Projects
 ==============
 
-.. image:: grasshoper.jpg
-   :alt: Hasard project (photo of a grasshoper)
-   :align: right
-   :target: http://hasard.readthedocs.org/
-
 * `"misc" repository <http://github.com/vstinner/misc>`_:
 
   - my "dot" files, configuration files: bashrc, hgrc, gitconfig, etc.
   - some command line program: apply_patch.py, scm.py
   - some Python scripts
   - some shell scripts: apt_get.sh, fedora_new_install.sh
-
-* `aioeventlet <http://aioeventlet.readthedocs.org/>`_: implementation of the
-  asyncio API (PEP 3156) on top of eventlet.
-* `aiogevent <https://pypi.python.org/pypi/aiogevent>`_: implementation of the
-  asyncio API (PEP 3156) on top of gevent.
-* `Trollius <http://trollius.readthedocs.org/>`_:  portage of the Tulip
-  project (asyncio module, PEP 3156) on Python 2, asynchronous input/output
-  library.

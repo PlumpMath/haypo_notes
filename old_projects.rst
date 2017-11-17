@@ -101,25 +101,32 @@ Python projects
 Other projects
 ==============
 
-* `Hasard <http://hasard.readthedocs.org/>`_: pseudo-random number
-  generator (PRNG) library.
-
-* `Hachoir <https://bitbucket.org/haypo/hachoir>`_: Python library that allows
+* `Trollius <http://trollius.readthedocs.org/>`_:  portage of the Tulip
+  project (asyncio module, PEP 3156) on Python 2, asynchronous input/output
+  library.
+* `Hachoir3 <http://hachoir3.readthedocs.io/>`_: Python library that allows
   to view and edit a binary stream field by field. In other words, Hachoir
   allows you to "browse" any binary stream just like you browse directories and
   files. A file is split in a tree of fields, where the smallest field is just
   one bit.
 * `Warmux <http://fr.wikipedia.org/wiki/Warmux>`_, previously known as "Wormux":
   Open source clone of the famous 2D game "Worms" by Team17.
-* `macfly <https://github.com/vstinner/macfly>`_: tool allowing to run one or more
-  programs with a shifted clock compared to system clock. project written at
-  INL for the french CNES (National Centre for Space Studies)
-* happyboom (project deleted): Prototype of a library to
-  write a turn-based game, it is mostly a network protocol.
+
+
+Old removed projects
+====================
+
+* Hasard: pseudo-random number generator (PRNG) library.
+* aioeventlet: implementation of the asyncio API (PEP 3156) on top of eventlet.
+* aiogevent: implementation of the asyncio API (PEP 3156) on top of gevent.
+* macfly: tool allowing to run one or more programs with a shifted clock
+  compared to system clock. project written at INL for the french CNES
+  (National Centre for Space Studies)
 * HaypoCALC: A formal calculator in text terminal. Existing functions : ln,lg,
   basen, gcd, lcm, ncr, npr, factor(int), cos,sin,tan, acos,asin,atan,
   derive,taylor, ... Work on Linux and Windows, programmed in C++.
-
+* happyboom: Prototype of a library to write a turn-based game, it is mostly a
+  network protocol.
 
 Workshops Lolut
 ===============
