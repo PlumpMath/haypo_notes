@@ -20,8 +20,9 @@ Contact me
    :align: right
 
 * Email: victor.stinner@gmail.com
-* IRC: my nickname is **haypo** on `Freenode <https://freenode.net/>`_,
-  I'm usually connected to #python-fr and #python-dev.
+* IRC: my nickname is **vstinner** on `Freenode <https://freenode.net/>`_,
+  I'm usually connected to #python-fr and #python-dev. Previously, I used
+  the nick **haypo**.
 
 
 Public profiles

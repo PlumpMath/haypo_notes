@@ -389,6 +389,7 @@ Tested by Travis CI and buildbots.
 
 Supported platform with best effort support:
 
+* Android API 24
 * OpenBSD
 * NetBSD
 * Solaris, OpenIndiana
