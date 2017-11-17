@@ -15,7 +15,8 @@ Old Projects (2000-2009)
 Websites
 ========
 
-- `Wiki <http://www.haypocalc.com/wiki/>`_ (last new article in december 2013)
+- `Wiki <http://www.haypocalc.com/wiki/>`_ (last new article in december 2013).
+  haypocalc.com domain created in december 2001.
 - `Blog Haypo <http://www.haypocalc.com/blog/>`_ (last article in 2011)
 - `Wordpress Blog <http://www.haypocalc.com/wordpress/>`_ (last article in 2011)
 - `La page de Haypo <http://haypo.developpez.com/>`_ (2005)
